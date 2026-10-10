@@ -108,4 +108,4 @@ A single-file, offline domino atlas with ten playable variants against a local A
 
 ## Audit independent
 
-Un audit adversarial separat (raport: `Domino-fara-frontiere.AUDIT.md`) a corectat: mâinile la Draw, scorarea Sniff, începătorul după blocaj la Latin 200, un crash la statistici corupte din localStorage, pierderea focusului de la tastatură, un fallback pentru mutare ilegală a AI-ului. Rulat pe versiunea finală: fuzz independent (line + train), 135 scenarii, test de informație ascunsă pentru AI, 6000 de table, RNG, i18n, plus testele constructorului.
+Un audit adversarial separat a corectat: mâinile la Draw, scorarea Sniff, începătorul după blocaj la Latin 200, un crash la statistici corupte din localStorage, pierderea focusului de la tastatură, un fallback pentru mutare ilegală a AI-ului. Rulat pe versiunea finală: fuzz independent (line + train), 135 scenarii, test de informație ascunsă pentru AI, 6000 de table, RNG, i18n, plus testele constructorului.
