@@ -8,7 +8,7 @@
   Aplicație single-file, offline, fără telemetrie, fără cereri de rețea.
   Licență: nedeclarată — decizia autorului (vezi README.md).
 -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-i4HRHYxg2MyJCd4XI6S6iG7kgNFGR/h5V0OtD48xvRw='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-PBTPfYsYfGynP3vCq01iEoYjgmUb6JzXPqBx/EWPJ9M='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0d0a08">
@@ -98,7 +98,7 @@ nav.tabs .btn{ flex:0 1 auto; }
 .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); gap:14px; }
 .card{ background:linear-gradient(180deg,var(--panel),var(--panel2)); border:1px solid var(--line); border-radius:var(--r); padding:16px; display:flex; flex-direction:column; gap:9px; position:relative; }
 .card:hover{ border-color:var(--gold); }
-.card h3{ font-size:1.2rem; margin:0; letter-spacing:.02em; font-weight:600; }
+.card h2, .card h3{ font-size:1.2rem; margin:0; letter-spacing:.02em; font-weight:600; }
 .card .tilepair{ display:flex; gap:6px; align-items:center; }
 .card .tilepair svg{ height:44px; width:22px; }
 .meta{ display:flex; flex-wrap:wrap; gap:6px; font-family:var(--sans); font-size:.76rem; }
@@ -163,6 +163,7 @@ nav.tabs .btn{ flex:0 1 auto; }
 .tilebtn.sel .t-rect{ stroke:#fff; }
 .tilebtn:focus-visible{ outline:3px solid var(--gold2); outline-offset:3px; }
 .dests{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+.dests .dest-prompt{ flex:0 0 100%; margin:0; font-family:var(--sans); font-size:.9rem; font-weight:600; color:var(--gold2); }
 .actions{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; align-items:center; }
 .logbox{ margin-top:10px; font-family:var(--sans); font-size:.86rem; color:var(--ink2); background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:8px 12px; max-height:11em; overflow:auto; }
 .logbox ul{ margin:4px 0 0; padding-left:1.2em; }
@@ -2217,7 +2218,7 @@ function renderAtlas(){
     var card = el('article', 'card'); card.id = 'card-' + a.id;
     var pair = el('div', 'tilepair'); pair.innerHTML = X.tileSvg(a.icon[0], a.icon[1]) + X.tileSvg(a.icon[1], a.icon[0]);
     card.appendChild(pair);
-    var h3 = el('h3', null, tx.name); card.appendChild(h3);
+    var h3 = el('h2', null, tx.name); card.appendChild(h3);
     var meta = el('div', 'meta');
     meta.appendChild(el('span', 'tag ' + (a.play ? 'play' : 'only'), a.play ? t('c.playable') : t('c.atlasOnly')));
     if(a.play && tx.approx && tx.approx.length) meta.appendChild(el('span', 'tag warn', '⚠ ' + t('c.approx')));
@@ -2735,6 +2736,8 @@ function renderDests(){
   if(!isHuman()) return;
   var plays = humanPlays();
   if(G.sel !== null){
+    // visible prompt: the tile is selected and the game waits for the end to be chosen
+    root.appendChild(el('p', 'dest-prompt', t('g.chooseDest', { tile: X.tileName(G.st.S, G.sel) })));
     plays.filter(function(a){ return a.tile === G.sel; }).forEach(function(a){
       var b = el('button', 'btn pri', destLabel(a)); b.type = 'button';
       b.addEventListener('click', function(){ onDest(a); });
@@ -2954,7 +2957,7 @@ if(document.readyState === 'loading') document.addEventListener('DOMContentLoade
 
 </script>
 <!-- tf-donate: sprijin voluntar (Patreon + Buy Me a Coffee) — self-contained, fără resurse externe, fără JS -->
-<div id="tf-donate" aria-label="Sprijină autorul">
+<div id="tf-donate" role="complementary" aria-label="Sprijină autorul">
 <style>
 #tf-donate{position:fixed;right:14px;bottom:14px;z-index:2147483600;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1}
 #tf-donate *{box-sizing:border-box}

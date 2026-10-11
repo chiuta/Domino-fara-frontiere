@@ -93,6 +93,13 @@ Tot ce urmează s-a rulat pe `index.html` final (scripturile sunt păstrate în 
 
 Deschide `index.html` într-un browser (nu cere server). Pentru a reconstrui din sursele de lucru: `node build.mjs`; pentru teste: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (scripturile se află în directorul de lucru, în afara pachetului publicat).
 
+## Istoric / Changelog
+
+Ultima actualizare: 11 octombrie 2026 (aplicația nu are număr de versiune).
+- Când ai ales o piesă care se poate pune la două capete, apare acum un mesaj vizibil „Alege unde pui …” deasupra butoanelor de destinație (înainte exista doar mesajul de stare).
+- Accesibilitate: titlurile cardurilor din atlas sunt h2 (ordine corectă sub h1), blocul de sprijin este reper `complementary`; axe-core = 0 violări la 1280 și 360 px. Hash-ul CSP al scriptului a fost recalculat.
+- Notă: suita de teste din README (`tests/`) și `build.mjs` nu se află în acest depozit; după modificare s-au verificat `node --check`, o partidă prin interfață și 0 erori de consolă/CSP.
+
 ## Licență
 
 Nedeclarată — decizia autorului.
