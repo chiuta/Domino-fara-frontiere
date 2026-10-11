@@ -21,7 +21,8 @@ Doar ce este verificat în cod și în teste:
 - Spinner cu patru brațe (All Fives, Sniff); trenuri personale, tren mexican, marcaje și dubluri deschise (Mexican Train).
 - Primul jucător: cel mai mare dublu din mâini (sau 6-6 la dominoul latin); tragere din boneyard acolo unde regula o permite; blocaj (nimeni nu mai poate juca): câștigă cine are cele mai puține puncte rămase, cu regula de scor a fiecărei variante (descrisă în fișa variantei).
 - AI în trei niveluri care diferă real (vezi „Limite”): 1 aleatoriu/lacom, 2 euristici, 3 numără piesele jucate și deduce din pase ce nu are un adversar. AI-ul lucrează numai pe vederea publică + propria mână.
-- Sugestie (H), mod „arată mâinile AI” explicit și doar pentru învățat, sămânță opțională pentru partide reproductibile, statistici locale, temă luminoasă/întunecată, 3 mărimi de text, auto-joc al mutării unice (tragere/pas).
+- Sugestie (H), mod „arată mâinile AI” explicit și doar pentru învățat, sămânță opțională pentru partide reproductibile, statistici locale, temă luminoasă/întunecată (la prima deschidere se urmează preferința sistemului), 3 mărimi de text, auto-joc al mutării unice (tragere/pas).
+- „Anulează mutarea” (buton sau tasta U): revine la starea de dinaintea ultimei tale mutări (până la 40 de pași, inclusiv mutările AI făcute între timp; starea se clonează, nu se recalculează). O partidă în care ai folosit anularea nu intră în statistici.
 - Randomul: `crypto.getRandomValues` cu eșantionare prin respingere; cu sămânță, mulberry32 (aceeași eșantionare). Amestec Fisher–Yates.
 - Accesibilitate: joc complet de la tastatură, `aria-live` pe stare, focus vizibil, ținte tactile ≥ 44 px (măsurat pe 390 px; excepție: butoanele din subsolul de donații, ~29 px), focus de tastatură păstrat după fiecare mutare, contrast ≥ 4,5:1 (măsurat pe perechile de culori din ambele teme), `prefers-reduced-motion`, fără scroll orizontal la 390 px, `<noscript>`, `lang` dinamic.
 
@@ -56,7 +57,7 @@ Nu sunt incluse „domino de culoare” (termen ambiguu) și Sebastopol (pagina 
 3. Când e rândul tău, piesele jucabile sunt ridicate și evidențiate. Apasă o piesă; dacă are o singură destinație se joacă imediat, altfel alegi destinația cu butoanele de sub mână sau apăsând un capăt marcat pe masă.
 4. Dacă nu ai mutare: „Trage” (D) sau „Pas” (P). Cu „Auto” activ, mutarea unică se face automat după o secundă.
 5. Mexican Train: prima ta tură poate fi un lanț de piese pe trenul tău, apoi „Termină tura” (E). Un dublu cere o piesă în plus; un dublu deschis trebuie satisfăcut. Când pasezi, îți pui marcajul pe tren.
-6. Tastatură: Tab până la mână, săgeți între piese, Enter pentru a juca; D, P, E, H (sugestie). Esc închide ferestrele.
+6. Tastatură: Tab până la mână, săgeți între piese, Enter pentru a juca; D, P, E, H (sugestie), U (anulează mutarea). Esc închide ferestrele.
 7. Butoanele din colț: limba, temă, mărime text, cifre, auto, statistici, despre. Zoom pe masă: −, ⤢, +.
 
 ## Limbi
@@ -96,6 +97,7 @@ Deschide `index.html` într-un browser (nu cere server). Pentru a reconstrui din
 ## Istoric / Changelog
 
 Ultima actualizare: 11 octombrie 2026 (aplicația nu are număr de versiune).
+- Nou: „Anulează mutarea” (U) cu stivă de 40 de stări; partidele cu anulare sunt excluse din statistici. Tema inițială urmează `prefers-color-scheme` dacă nu e salvată alta. Jurnalul de partidă poate fi derulat de la tastatură (reper cu `tabindex`). Hash-ul CSP recalculat.
 - Când ai ales o piesă care se poate pune la două capete, apare acum un mesaj vizibil „Alege unde pui …” deasupra butoanelor de destinație (înainte exista doar mesajul de stare).
 - Accesibilitate: titlurile cardurilor din atlas sunt h2 (ordine corectă sub h1), blocul de sprijin este reper `complementary`; axe-core = 0 violări la 1280 și 360 px. Hash-ul CSP al scriptului a fost recalculat.
 - Notă: suita de teste din README (`tests/`) și `build.mjs` nu se află în acest depozit; după modificare s-au verificat `node --check`, o partidă prin interfață și 0 erori de consolă/CSP.

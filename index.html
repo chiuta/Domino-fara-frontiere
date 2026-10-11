@@ -8,7 +8,7 @@
   Aplicație single-file, offline, fără telemetrie, fără cereri de rețea.
   Licență: nedeclarată — decizia autorului (vezi README.md).
 -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-PBTPfYsYfGynP3vCq01iEoYjgmUb6JzXPqBx/EWPJ9M='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0WdZ0Qr5jGWK6/8lX4fa2Oq9HurYDSlvmwbwrba5RdQ='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0d0a08">
@@ -297,7 +297,7 @@ footer p{ margin:.4em 0; }
     <div id="actions" class="actions"></div>
     <p class="sub" style="margin:8px 0 0;color:var(--ink3);font-family:var(--sans);font-size:.8rem" data-i18n="g.keys"></p>
   </div>
-  <div class="logbox"><strong data-i18n="g.logTitle">Jurnal</strong><div id="log"></div></div>
+  <div class="logbox" tabindex="0" role="region" aria-labelledby="logTitle"><strong id="logTitle" data-i18n="g.logTitle">Jurnal</strong><div id="log"></div></div>
   <div id="rulesBox"></div>
 </section>
 </main>
@@ -474,6 +474,9 @@ var I18N = {
 'w.own': ['trenul tău','your train','votre train','il tuo treno','tu tren','o teu comboio','dein Zug'],
 'w.train': ['trenul lui {name}','{name}’s train','train de {name}','treno di {name}','tren de {name}','comboio de {name}','Zug von {name}'],
 /* jurnal */
+'g.undo': ['Anulează mutarea','Undo move','Annuler le coup','Annulla mossa','Deshacer jugada','Desfazer jogada','Zug zurücknehmen'],
+'g.undoNote': ['Revii la starea de dinaintea ultimei tale mutări. Partida în care ai anulat o mutare nu se mai numără în statistici.','Go back to the state before your last move. A game in which you undo a move is not counted in the statistics.','Revenir à l’état avant votre dernier coup. Une partie où vous annulez un coup n’est pas comptée dans les statistiques.','Torni allo stato prima della tua ultima mossa. Una partita in cui annulli una mossa non conta nelle statistiche.','Vuelves al estado anterior a tu última jugada. Una partida en la que deshaces una jugada no cuenta en las estadísticas.','Voltas ao estado anterior à tua última jogada. Uma partida em que desfazes uma jogada não conta nas estatísticas.','Zurück zum Zustand vor Ihrem letzten Zug. Eine Partie, in der Sie einen Zug zurücknehmen, zählt nicht in der Statistik.'],
+'log.undo': ['Mutare anulată.','Move undone.','Coup annulé.','Mossa annullata.','Jugada deshecha.','Jogada desfeita.','Zug zurückgenommen.'],
 'log.start': ['Partida începe: {name}.','The game begins: {name}.','La partie commence : {name}.','La partita inizia: {name}.','Empieza la partida: {name}.','A partida começa: {name}.','Die Partie beginnt: {name}.'],
 'log.play': ['{name} joacă {tile} ({where}).','{name} plays {tile} ({where}).','{name} joue {tile} ({where}).','{name} gioca {tile} ({where}).','{name} juega {tile} ({where}).','{name} joga {tile} ({where}).','{name} legt {tile} ({where}).'],
 'log.pts': ['+{n} puncte','+{n} points','+{n} points','+{n} punti','+{n} puntos','+{n} pontos','+{n} Punkte'],
@@ -2033,6 +2036,7 @@ var LANGS = ['ro','en','fr','it','es','pt','de'];
 var LANG_NAMES = { ro:'Română', en:'English', fr:'Français', it:'Italiano', es:'Español', pt:'Português', de:'Deutsch' };
 var LS_KEY = 'dff1';
 var prefs = { lang:null, theme:'dark', size:'normal', num:false, level:3, auto:true, setup:{} };
+var themeStored = false;
 var stats = {};
 var reduceMotion = false;
 try { reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch(e){}
@@ -2050,6 +2054,7 @@ function loadPrefs(){
       var o = JSON.parse(raw);
       if(o && o.p){
         ['lang','theme','size'].forEach(function(k){ if(typeof o.p[k] === 'string') prefs[k] = o.p[k]; });
+        if(o.p.theme === 'dark' || o.p.theme === 'light') themeStored = true;
         if(typeof o.p.num === 'boolean') prefs.num = o.p.num;
         if(typeof o.p.auto === 'boolean') prefs.auto = o.p.auto;
         if(o.p.level >= 1 && o.p.level <= 3) prefs.level = o.p.level | 0;
@@ -2069,6 +2074,8 @@ function loadPrefs(){
   } catch(e){}
   if(LANGS.indexOf(prefs.lang) < 0) prefs.lang = detectLang();
   if(prefs.theme !== 'dark' && prefs.theme !== 'light') prefs.theme = 'dark';
+  /* la prima deschidere (fara alegere salvata) se respecta preferinta sistemului */
+  if(!themeStored){ try { if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) prefs.theme = 'light'; } catch(e){} }
   if(['small','normal','large'].indexOf(prefs.size) < 0) prefs.size = 'normal';
 }
 function savePrefs(){ try { window.localStorage.setItem(LS_KEY, JSON.stringify({ p:prefs, s:stats })); } catch(e){} }
@@ -2446,10 +2453,41 @@ function describe(evs){
 }
 
 /* ---------- actiuni ---------- */
+/* copie profunda a starii de joc; setul de piese (S, cu functii) si configuratia (cfg) raman partajate */
+function cloneVal(v){
+  if(v === null || typeof v !== 'object') return v;
+  var o, k;
+  if(ArrayBuffer.isView(v)) return v.slice();
+  if(Array.isArray(v)){ o = new Array(v.length); for(k = 0; k < v.length; k++) o[k] = cloneVal(v[k]); return o; }
+  o = {}; for(k in v) if(Object.prototype.hasOwnProperty.call(v, k)) o[k] = cloneVal(v[k]);
+  return o;
+}
+function cloneState(st){
+  var o = {}, k;
+  for(k in st) if(Object.prototype.hasOwnProperty.call(st, k)) o[k] = (k === 'S' || k === 'cfg') ? st[k] : cloneVal(st[k]);
+  return o;
+}
+function doUndo(){
+  if(!G || !G.undo || !G.undo.length || G.st.phase !== 'play') return;
+  var sn = G.undo.pop();
+  stopTimers();
+  G.st = sn.st; G.log = sn.log; G.prevActor = sn.prevActor; G.lastTile = sn.lastTile; G.sel = null; G.hint = null;
+  G.usedUndo = true;
+  pushLog(t('log.undo'));
+  renderAll();
+  statusForTurn();
+  scheduleNext();
+}
 function applyAction(a){
   var st = G.st, who = st.turn;
   var evs;
-  try { evs = D.act(st, a, G.rng); } catch(err){ setStatus(t('g.error'), false); return false; }
+  if(who === 0){
+    /* instantaneu inainte de mutarea ta, pentru „Anuleaza mutarea" (maximum 40) */
+    G.undo = G.undo || [];
+    G.undo.push({ st: cloneState(st), log: G.log.slice(), prevActor: G.prevActor, lastTile: G.lastTile });
+    if(G.undo.length > 40) G.undo.shift();
+  }
+  try { evs = D.act(st, a, G.rng); } catch(err){ if(who === 0 && G.undo) G.undo.pop(); setStatus(t('g.error'), false); return false; }
   G.sel = null; G.hint = null; G.prevActor = who;
   describe(evs);
   renderAll();
@@ -2757,6 +2795,7 @@ function renderActions(){
   if(has('pass')) add(t(st.fam === 'train' ? 'g.passMark' : 'g.pass') + ' (P)', doPass, 'pri', true, 'btnPass');
   if(has('end')) add(t('g.endTurn') + ' (E)', doEnd, has('play') ? '' : 'pri', true, 'btnEnd');
   if(human && acts.some(function(a){ return a.t === 'play'; })) add(t('g.hint') + ' (H)', doHint, '', true, 'btnHint');
+  if(G.undo && G.undo.length && st.phase === 'play'){ var ub = add(t('g.undo') + ' (U)', doUndo, '', true, 'btnUndo'); ub.title = t('g.undoNote'); }
   if(st.phase !== 'play') add(t('g.continue') + ' (N)', showOver, 'pri', true, 'btnCont');
 }
 function renderLog(){
@@ -2773,6 +2812,7 @@ function remTiles(st, p){
 }
 function showOver(){
   if(!G) return;
+  G.undo = [];
   var st = G.st, body = $('overBody'), foot = $('overFoot'); clear(body); clear(foot);
   var over = st.phase === 'gameOver';
   var title, i, tb, tr, th;
@@ -2848,6 +2888,7 @@ function showOver(){
 }
 function bumpStats(won){
   if(!G || G.counted) return; G.counted = true;
+  if(G.usedUndo) return;   /* partidele cu mutari anulate nu intra in statistici */
   var s = X.stats(); var k = G.vid; s[k] = s[k] || { g:0, w:0 }; s[k].g++; if(won) s[k].w++;
   X.savePrefs();
 }
@@ -2875,7 +2916,7 @@ X.initGame = function(){
     var tg = ev.target; if(tg && (tg.tagName === 'INPUT' || tg.tagName === 'SELECT' || tg.tagName === 'TEXTAREA')) return;
     if(document.querySelector('dialog[open]')) return;
     var k = ev.key.toLowerCase();
-    if(k === 'd') doDraw(); else if(k === 'p') doPass(); else if(k === 'e') doEnd(); else if(k === 'h') doHint();
+    if(k === 'd') doDraw(); else if(k === 'p') doPass(); else if(k === 'e') doEnd(); else if(k === 'h') doHint(); else if(k === 'u') doUndo();
     else if(k === 'n' && G.st.phase !== 'play') showOver();
   });
   window.addEventListener('resize', function(){ if(G) { clearTimeout(G.rz); G.rz = setTimeout(renderBoard, 120); } });
