@@ -8,7 +8,7 @@
   Aplicație single-file, offline, fără telemetrie, fără cereri de rețea.
   Licență: nedeclarată — decizia autorului (vezi README.md).
 -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0WdZ0Qr5jGWK6/8lX4fa2Oq9HurYDSlvmwbwrba5RdQ='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-4SnbQ68+l3YAqtnhx6aTVS1RItT5SXQ7lEaY8JggRpE='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0d0a08">
@@ -2429,6 +2429,10 @@ function startMatch(vid, setup){
 function stopTimers(){ if(G){ clearTimeout(G.timer); clearTimeout(G.overTimer); } }
 function leaveGame(){ stopTimers(); G = null; X.showView('atlas'); }
 X.leaveGame = leaveGame;
+// A match in progress is lost on reload/close: ask the browser to confirm (only after the first move, never after game over)
+window.addEventListener('beforeunload', function(e){
+  if (G && G.st && G.st.phase !== 'gameOver' && G.st.history && G.st.history.length > 0) { e.preventDefault(); e.returnValue = ''; }
+});
 
 /* ---------- jurnal / stare ---------- */
 function pushLog(s){ if(!G) return; G.log.push(s); if(G.log.length > 60) G.log.shift(); }

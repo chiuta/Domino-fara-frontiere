@@ -96,7 +96,13 @@ Deschide `index.html` într-un browser (nu cere server). Pentru a reconstrui din
 
 ## Istoric / Changelog
 
-Ultima actualizare: 11 octombrie 2026 (aplicația nu are număr de versiune).
+Ultima actualizare: 11 octombrie 2026 (runda 7; aplicația nu are număr de versiune).
+
+Runda 7:
+- O partidă începută (după prima mutare) și nefinalizată cere acum confirmarea browserului la reîncărcarea sau închiderea paginii (`beforeunload`), ca să nu pierzi accidental partida; după „game over” și înainte de prima mutare nu apare nicio întrebare. Partida nu este salvată între vizite. Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px.
+- Suita `tests/` și `build.mjs` din secțiunea „Rulare locală” rămân în afara depozitului publicat (declarat și acolo); verificări: `node --check`, o partidă prin interfață, 0 erori de consolă/CSP.
+
+Runda 6:
 - Nou: „Anulează mutarea” (U) cu stivă de 40 de stări; partidele cu anulare sunt excluse din statistici. Tema inițială urmează `prefers-color-scheme` dacă nu e salvată alta. Jurnalul de partidă poate fi derulat de la tastatură (reper cu `tabindex`). Hash-ul CSP recalculat.
 - Când ai ales o piesă care se poate pune la două capete, apare acum un mesaj vizibil „Alege unde pui …” deasupra butoanelor de destinație (înainte exista doar mesajul de stare).
 - Accesibilitate: titlurile cardurilor din atlas sunt h2 (ordine corectă sub h1), blocul de sprijin este reper `complementary`; axe-core = 0 violări la 1280 și 360 px. Hash-ul CSP al scriptului a fost recalculat.
