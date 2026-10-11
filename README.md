@@ -97,6 +97,10 @@ Deschide `index.html` într-un browser (nu cere server). Pentru a reconstrui din
 
 Nedeclarată — decizia autorului.
 
+## Nume comerciale
+
+„Mexican Train” și alte denumiri de produs pot fi mărci ale deținătorilor lor; aplicația nu este afiliată cu ei, iar denumirile sunt folosite descriptiv pentru reguli tradiționale de domino.
+
 ## Autor
 
 Alexandru-Ionuț Chiuță (Alexio).
