@@ -1,5 +1,7 @@
 # Domino fără frontiere
 
+**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
+
 Atlas de domino și joc contra unui AI local: 10 variante jucabile (2–4 jucători, echipe 2 contra 2 unde regula o cere) și 5 fișe doar documentate. Un singur fișier HTML, offline, fără dependențe.
 
 **Live:** https://chiuta.github.io/Domino-fara-frontiere/
@@ -96,7 +98,7 @@ Deschide `index.html` într-un browser (nu cere server). Pentru a reconstrui din
 
 ## Istoric / Changelog
 
-Ultima actualizare: 11 octombrie 2026 (runda 7; aplicația nu are număr de versiune).
+- 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație (prima versiune numerotată; în dialogul „Despre”).
 
 Runda 7:
 - O partidă începută (după prima mutare) și nefinalizată cere acum confirmarea browserului la reîncărcarea sau închiderea paginii (`beforeunload`), ca să nu pierzi accidental partida; după „game over” și înainte de prima mutare nu apare nicio întrebare. Partida nu este salvată între vizite. Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px.
