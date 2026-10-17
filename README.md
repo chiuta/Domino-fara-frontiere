@@ -114,7 +114,7 @@ Runda 6:
 
 ## Licență
 
-Nedeclarată — decizia autorului.
+MIT — vezi fișierul `LICENSE`.
 
 ## Nume comerciale
 
@@ -126,7 +126,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## English summary
 
-A single-file, offline domino atlas with ten playable variants against a local AI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador on double-6/9/12, two Latin 2v2 partnership versions, and Mexican Train on double-12) plus five documented-only entries (Chicken Foot, Bergen, Five Up, All Threes, regional Latin versions). The rules engine is pure and separate from the UI, with a snaking board, scroll and zoom, full keyboard play, and a 7-language UI (long atlas texts exist in Romanian and English only; other languages show English with a note). The AI never sees hidden hands (level 3 counts tiles and infers from passes); levels 2 and 3 are equally strong at Mexican Train, and all three are about equal at Fives and Threes. Verified with 500 independently-validated AI-vs-AI games per configuration (0 failures), 227 hand-written rule scenarios (plus 135 from the independent audit) and layout fuzzing. No network, no telemetry, strict CSP. Every approximation is marked in the variant table and in the in-app rules. License: not declared (author's decision). Rules sources: Pagat.com.
+A single-file, offline domino atlas with ten playable variants against a local AI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador on double-6/9/12, two Latin 2v2 partnership versions, and Mexican Train on double-12) plus five documented-only entries (Chicken Foot, Bergen, Five Up, All Threes, regional Latin versions). The rules engine is pure and separate from the UI, with a snaking board, scroll and zoom, full keyboard play, and a 7-language UI (long atlas texts exist in Romanian and English only; other languages show English with a note). The AI never sees hidden hands (level 3 counts tiles and infers from passes); levels 2 and 3 are equally strong at Mexican Train, and all three are about equal at Fives and Threes. Verified with 500 independently-validated AI-vs-AI games per configuration (0 failures), 227 hand-written rule scenarios (plus 135 from the independent audit) and layout fuzzing. No network, no telemetry, strict CSP. Every approximation is marked in the variant table and in the in-app rules. License: MIT (see LICENSE). Rules sources: Pagat.com.
 
 
 ## Audit independent
