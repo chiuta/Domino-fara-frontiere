@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.1.0 · **Utolsó frissítés:** 2026-10-14
+**Verzió:** 1.2.0 · **Utolsó frissítés:** 2026-10-19
+
+A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Dominóatlasz és játék egy helyi MI ellen: 10 játszható változat (2–4 játékos, 2 a 2 elleni csapatok, ahol a szabály megköveteli) és 5 csak dokumentált lap. Egyetlen HTML-fájl, offline, függőségek nélkül.
 
@@ -66,7 +68,7 @@ Nem szerepelnek a „színes dominók” (félreérthető kifejezés) és a Seba
 
 ## Nyelvek
 
-A felület elemei (gombok, üzenetek, napló, eredmények) románul, angolul, franciául, olaszul, spanyolul, portugálul és németül érhetők el, váltóval és automatikus felismeréssel. **Az atlasz hosszú szövegei (eredet, szabályok, közelítések) csak románul és angolul léteznek; franciául, olaszul, spanyolul, portugálul és németül az angol jelenik meg, a „szöveg angolul” diszkrét megjegyzéssel.** A fordítási kulcsok paritását egy szkript ellenőrzi (`tests/i18n-check.js`: 180 kulcs × 7 nyelv, hézagok nélkül, azonos helyőrzőkkel).
+A felület elemei (gombok, üzenetek, napló, eredmények) románul, angolul, franciául, olaszul, spanyolul, portugálul, németül és magyarul érhetők el, váltóval és automatikus felismeréssel. **Az atlasz hosszú szövegei (eredet, szabályok, közelítések) csak románul és angolul léteznek; franciául, olaszul, spanyolul, portugálul, németül és magyarul az angol jelenik meg, a „szöveg angolul” diszkrét megjegyzéssel.** A fordítási kulcsok paritását egy szkript ellenőrzi (`tests/i18n-check.js`: 180 kulcs × 7 nyelv, hézagok nélkül, azonos helyőrzőkkel).
 
 ## Adatvédelem és hálózat
 
@@ -128,7 +130,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Angol nyelvű összefoglaló
 
-Egyetlen fájlból álló, offline dominóatlasz tíz játszható változattal egy helyi MI ellen (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador dupla-6/9/12-n, két latin 2v2 csapatváltozat és Mexican Train dupla-12-n), valamint öt csak dokumentált lappal (Chicken Foot, Bergen, Five Up, All Threes, regionális latin változatok). A szabálymotor tiszta és elkülönül a felülettől, kígyózó asztallal, görgetéssel és nagyítással, teljes billentyűzetes játékkal és 7 nyelvű felülettel (az atlasz hosszú szövegei csak románul és angolul léteznek; a többi nyelv angolul jelenik meg megjegyzéssel). Az MI sosem látja a rejtett kezeket (a 3. szint számolja a köveket és a passzokból következtet); a 2. és 3. szint egyformán erős a Mexican Trainnél, a három szint pedig nagyjából egyenlő a Fives and Threesnél. Ellenőrizve konfigurációnként 500 függetlenül érvényesített MI–MI játszmával (0 hiba), 227 kézzel írt szabályforgatókönyvvel (plusz 135 a független auditból) és elrendezés-fuzzinggal. Hálózat és telemetria nélkül, szigorú CSP-vel. Minden közelítés meg van jelölve a változattáblázatban és az alkalmazás szabályaiban. Licenc: MIT (lásd LICENSE). Szabályforrások: Pagat.com.
+Egyetlen fájlból álló, offline dominóatlasz tíz játszható változattal egy helyi MI ellen (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador dupla-6/9/12-n, két latin 2v2 csapatváltozat és Mexican Train dupla-12-n), valamint öt csak dokumentált lappal (Chicken Foot, Bergen, Five Up, All Threes, regionális latin változatok). A szabálymotor tiszta és elkülönül a felülettől, kígyózó asztallal, görgetéssel és nagyítással, teljes billentyűzetes játékkal és 8 nyelvű felülettel (az atlasz hosszú szövegei csak románul és angolul léteznek; a többi nyelv angolul jelenik meg megjegyzéssel). Az MI sosem látja a rejtett kezeket (a 3. szint számolja a köveket és a passzokból következtet); a 2. és 3. szint egyformán erős a Mexican Trainnél, a három szint pedig nagyjából egyenlő a Fives and Threesnél. Ellenőrizve konfigurációnként 500 függetlenül érvényesített MI–MI játszmával (0 hiba), 227 kézzel írt szabályforgatókönyvvel (plusz 135 a független auditból) és elrendezés-fuzzinggal. Hálózat és telemetria nélkül, szigorú CSP-vel. Minden közelítés meg van jelölve a változattáblázatban és az alkalmazás szabályaiban. Licenc: MIT (lásd LICENSE). Szabályforrások: Pagat.com.
 
 ## Független audit
 

@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.1.0 · **Dernière mise à jour :** 2026-10-14
+**Version :** 1.2.0 · **Dernière mise à jour :** 2026-10-19
+
+Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas du domino et jeu contre une IA locale : 10 variantes jouables (2 à 4 joueurs, équipes 2 contre 2 là où la règle l'exige) et 5 fiches seulement documentées. Un seul fichier HTML, hors ligne, sans dépendances.
 
@@ -66,7 +68,7 @@ Ne sont pas incluses les « dominos de couleur » (terme ambigu) et le Sebastopo
 
 ## Langues
 
-Les éléments de l'interface (boutons, messages, journal, résultats) sont en roumain, anglais, français, italien, espagnol, portugais et allemand, avec un sélecteur et une détection automatique. **Les longs textes de l'atlas (origine, règles, approximations) n'existent qu'en roumain et en anglais ; en français, italien, espagnol, portugais et allemand, c'est l'anglais qui s'affiche, avec la discrète mention « texte en anglais ».** La parité des clés de traduction est vérifiée par un script (`tests/i18n-check.js` : 180 clés × 7 langues, sans trous, mêmes paramètres substituables).
+Les éléments de l'interface (boutons, messages, journal, résultats) sont en roumain, anglais, français, italien, espagnol, portugais, allemand et hongrois, avec un sélecteur et une détection automatique. **Les longs textes de l'atlas (origine, règles, approximations) n'existent qu'en roumain et en anglais ; en français, italien, espagnol, portugais, allemand et hongrois, c'est l'anglais qui s'affiche, avec la discrète mention « texte en anglais ».** La parité des clés de traduction est vérifiée par un script (`tests/i18n-check.js` : 180 clés × 7 langues, sans trous, mêmes paramètres substituables).
 
 ## Confidentialité et réseau
 
@@ -128,7 +130,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Résumé en anglais
 
-Un atlas du domino en un seul fichier, hors ligne, avec dix variantes jouables contre une IA locale (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador sur double-6/9/12, deux versions latines par équipes 2v2 et Mexican Train sur double-12) plus cinq fiches seulement documentées (Chicken Foot, Bergen, Five Up, All Threes, versions latines régionales). Le moteur de règles est pur et séparé de l'interface, avec une table en serpentin, défilement et zoom, jeu complet au clavier et interface en 7 langues (les longs textes de l'atlas n'existent qu'en roumain et en anglais ; les autres langues affichent l'anglais avec une note). L'IA ne voit jamais les mains cachées (le niveau 3 compte les pièces et déduit des passes) ; les niveaux 2 et 3 sont aussi forts au Mexican Train, et les trois sont à peu près égaux à Fives and Threes. Vérifié avec 500 parties IA contre IA validées indépendamment par configuration (0 échec), 227 scénarios de règles écrits à la main (plus 135 de l'audit indépendant) et un fuzzing de la disposition. Pas de réseau, pas de télémétrie, CSP stricte. Chaque approximation est marquée dans le tableau des variantes et dans les règles de l'application. Licence : MIT (voir LICENSE). Sources des règles : Pagat.com.
+Un atlas du domino en un seul fichier, hors ligne, avec dix variantes jouables contre une IA locale (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador sur double-6/9/12, deux versions latines par équipes 2v2 et Mexican Train sur double-12) plus cinq fiches seulement documentées (Chicken Foot, Bergen, Five Up, All Threes, versions latines régionales). Le moteur de règles est pur et séparé de l'interface, avec une table en serpentin, défilement et zoom, jeu complet au clavier et interface en 8 langues (les longs textes de l'atlas n'existent qu'en roumain et en anglais ; les autres langues affichent l'anglais avec une note). L'IA ne voit jamais les mains cachées (le niveau 3 compte les pièces et déduit des passes) ; les niveaux 2 et 3 sont aussi forts au Mexican Train, et les trois sont à peu près égaux à Fives and Threes. Vérifié avec 500 parties IA contre IA validées indépendamment par configuration (0 échec), 227 scénarios de règles écrits à la main (plus 135 de l'audit indépendant) et un fuzzing de la disposition. Pas de réseau, pas de télémétrie, CSP stricte. Chaque approximation est marquée dans le tableau des variantes et dans les règles de l'application. Licence : MIT (voir LICENSE). Sources des règles : Pagat.com.
 
 ## Audit indépendant
 

@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 2026-10-14
+**Versiune:** 1.2.0 · **Ultima actualizare:** 2026-10-19
+
+Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas de domino și joc contra unui AI local: 10 variante jucabile (2–4 jucători, echipe 2 contra 2 unde regula o cere) și 5 fișe doar documentate. Un singur fișier HTML, offline, fără dependențe.
 
@@ -66,7 +68,7 @@ Nu sunt incluse „domino de culoare” (termen ambiguu) și Sebastopol (pagina 
 
 ## Limbi
 
-Elementele de interfață (butoane, mesaje, jurnal, rezultate) sunt în română, engleză, franceză, italiană, spaniolă, portugheză și germană, cu comutator și autodetecție. **Textele lungi ale atlasului (origine, reguli, aproximări) există doar în română și engleză; în franceză, italiană, spaniolă, portugheză și germană se afișează engleza, cu nota discretă „text în engleză”.** Paritatea cheilor de traducere este verificată cu un script (`tests/i18n-check.js`: 180 de chei × 7 limbi, fără goluri, aceleași substituenți).
+Elementele de interfață (butoane, mesaje, jurnal, rezultate) sunt în română, engleză, franceză, italiană, spaniolă, portugheză, germană și maghiară, cu comutator și autodetecție. **Textele lungi ale atlasului (origine, reguli, aproximări) există doar în română și engleză; în franceză, italiană, spaniolă, portugheză, germană și maghiară se afișează engleza, cu nota discretă „text în engleză”.** Paritatea cheilor de traducere este verificată cu un script (`tests/i18n-check.js`: 180 de chei × 7 limbi, fără goluri, aceleași substituenți).
 
 ## Confidențialitate și rețea
 
@@ -128,7 +130,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## English summary
 
-A single-file, offline domino atlas with ten playable variants against a local AI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador on double-6/9/12, two Latin 2v2 partnership versions, and Mexican Train on double-12) plus five documented-only entries (Chicken Foot, Bergen, Five Up, All Threes, regional Latin versions). The rules engine is pure and separate from the UI, with a snaking board, scroll and zoom, full keyboard play, and a 7-language UI (long atlas texts exist in Romanian and English only; other languages show English with a note). The AI never sees hidden hands (level 3 counts tiles and infers from passes); levels 2 and 3 are equally strong at Mexican Train, and all three are about equal at Fives and Threes. Verified with 500 independently-validated AI-vs-AI games per configuration (0 failures), 227 hand-written rule scenarios (plus 135 from the independent audit) and layout fuzzing. No network, no telemetry, strict CSP. Every approximation is marked in the variant table and in the in-app rules. License: MIT (see LICENSE). Rules sources: Pagat.com.
+A single-file, offline domino atlas with ten playable variants against a local AI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador on double-6/9/12, two Latin 2v2 partnership versions, and Mexican Train on double-12) plus five documented-only entries (Chicken Foot, Bergen, Five Up, All Threes, regional Latin versions). The rules engine is pure and separate from the UI, with a snaking board, scroll and zoom, full keyboard play, and an 8-language UI (long atlas texts exist in Romanian and English only; other languages show English with a note). The AI never sees hidden hands (level 3 counts tiles and infers from passes); levels 2 and 3 are equally strong at Mexican Train, and all three are about equal at Fives and Threes. Verified with 500 independently-validated AI-vs-AI games per configuration (0 failures), 227 hand-written rule scenarios (plus 135 from the independent audit) and layout fuzzing. No network, no telemetry, strict CSP. Every approximation is marked in the variant table and in the in-app rules. License: MIT (see LICENSE). Rules sources: Pagat.com.
 
 ## Audit independent
 

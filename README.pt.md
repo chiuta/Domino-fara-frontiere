@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.1.0 · **Última atualização:** 2026-10-14
+**Versão:** 1.2.0 · **Última atualização:** 2026-10-19
+
+Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas do dominó e jogo contra uma IA local: 10 variantes jogáveis (2–4 jogadores, equipas 2 contra 2 onde a regra o exige) e 5 fichas apenas documentadas. Um único ficheiro HTML, offline, sem dependências.
 
@@ -66,7 +68,7 @@ Não estão incluídos os «dominós de cor» (termo ambíguo) e o Sebastopol (a
 
 ## Idiomas
 
-Os elementos da interface (botões, mensagens, registo, resultados) estão em romeno, inglês, francês, italiano, espanhol, português e alemão, com seletor e deteção automática. **Os textos longos do atlas (origem, regras, aproximações) existem apenas em romeno e inglês; em francês, italiano, espanhol, português e alemão é apresentado o inglês, com a discreta nota «texto em inglês».** A paridade das chaves de tradução é verificada com um script (`tests/i18n-check.js`: 180 chaves × 7 idiomas, sem lacunas, os mesmos marcadores de posição).
+Os elementos da interface (botões, mensagens, registo, resultados) estão em romeno, inglês, francês, italiano, espanhol, português, alemão e húngaro, com seletor e deteção automática. **Os textos longos do atlas (origem, regras, aproximações) existem apenas em romeno e inglês; em francês, italiano, espanhol, português, alemão e húngaro é apresentado o inglês, com a discreta nota «texto em inglês».** A paridade das chaves de tradução é verificada com um script (`tests/i18n-check.js`: 180 chaves × 7 idiomas, sem lacunas, os mesmos marcadores de posição).
 
 ## Privacidade e rede
 
@@ -128,7 +130,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Resumo em inglês
 
-Um atlas do dominó num único ficheiro, offline, com dez variantes jogáveis contra uma IA local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador em duplo-6/9/12, duas versões latinas por equipas 2v2 e Mexican Train em duplo-12) mais cinco fichas apenas documentadas (Chicken Foot, Bergen, Five Up, All Threes, versões latinas regionais). O motor de regras é puro e está separado da interface, com mesa em serpentina, deslocamento e zoom, jogo completo pelo teclado e interface em 7 idiomas (os textos longos do atlas existem apenas em romeno e inglês; os outros idiomas apresentam o inglês com uma nota). A IA nunca vê as mãos ocultas (o nível 3 conta as peças e deduz dos passes); os níveis 2 e 3 são igualmente fortes no Mexican Train, e os três são aproximadamente iguais no Fives and Threes. Verificado com 500 jogos IA contra IA validados de forma independente por configuração (0 falhas), 227 cenários de regras escritos à mão (mais 135 da auditoria independente) e fuzzing da disposição. Sem rede, sem telemetria, CSP estrita. Cada aproximação está assinalada na tabela de variantes e nas regras da aplicação. Licença: MIT (ver LICENSE). Fontes das regras: Pagat.com.
+Um atlas do dominó num único ficheiro, offline, com dez variantes jogáveis contra uma IA local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador em duplo-6/9/12, duas versões latinas por equipas 2v2 e Mexican Train em duplo-12) mais cinco fichas apenas documentadas (Chicken Foot, Bergen, Five Up, All Threes, versões latinas regionais). O motor de regras é puro e está separado da interface, com mesa em serpentina, deslocamento e zoom, jogo completo pelo teclado e interface em 8 idiomas (os textos longos do atlas existem apenas em romeno e inglês; os outros idiomas apresentam o inglês com uma nota). A IA nunca vê as mãos ocultas (o nível 3 conta as peças e deduz dos passes); os níveis 2 e 3 são igualmente fortes no Mexican Train, e os três são aproximadamente iguais no Fives and Threes. Verificado com 500 jogos IA contra IA validados de forma independente por configuração (0 falhas), 227 cenários de regras escritos à mão (mais 135 da auditoria independente) e fuzzing da disposição. Sem rede, sem telemetria, CSP estrita. Cada aproximação está assinalada na tabela de variantes e nas regras da aplicação. Licença: MIT (ver LICENSE). Fontes das regras: Pagat.com.
 
 ## Auditoria independente
 

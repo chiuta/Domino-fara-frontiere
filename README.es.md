@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.1.0 · **Última actualización:** 2026-10-14
+**Versión:** 1.2.0 · **Última actualización:** 2026-10-19
+
+Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas del dominó y juego contra una IA local: 10 variantes jugables (2–4 jugadores, equipos 2 contra 2 donde la regla lo exige) y 5 fichas solo documentadas. Un único archivo HTML, sin conexión, sin dependencias.
 
@@ -66,7 +68,7 @@ No se incluyen los «dominós de colores» (término ambiguo) ni el Sebastopol (
 
 ## Idiomas
 
-Los elementos de la interfaz (botones, mensajes, registro, resultados) están en rumano, inglés, francés, italiano, español, portugués y alemán, con selector y autodetección. **Los textos largos del atlas (origen, reglas, aproximaciones) existen solo en rumano e inglés; en francés, italiano, español, portugués y alemán se muestra el inglés, con la discreta nota «texto en inglés».** La paridad de las claves de traducción se verifica con un script (`tests/i18n-check.js`: 180 claves × 7 idiomas, sin huecos, los mismos marcadores de posición).
+Los elementos de la interfaz (botones, mensajes, registro, resultados) están en rumano, inglés, francés, italiano, español, portugués, alemán y húngaro, con selector y autodetección. **Los textos largos del atlas (origen, reglas, aproximaciones) existen solo en rumano e inglés; en francés, italiano, español, portugués, alemán y húngaro se muestra el inglés, con la discreta nota «texto en inglés».** La paridad de las claves de traducción se verifica con un script (`tests/i18n-check.js`: 180 claves × 7 idiomas, sin huecos, los mismos marcadores de posición).
 
 ## Privacidad y red
 
@@ -128,7 +130,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Resumen en inglés
 
-Un atlas del dominó de un único archivo, sin conexión, con diez variantes jugables contra una IA local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador en doble-6/9/12, dos versiones latinas por equipos 2v2 y Mexican Train en doble-12) más cinco fichas solo documentadas (Chicken Foot, Bergen, Five Up, All Threes, versiones latinas regionales). El motor de reglas es puro y está separado de la interfaz, con mesa en serpentina, desplazamiento y zoom, juego completo con teclado e interfaz en 7 idiomas (los textos largos del atlas existen solo en rumano e inglés; los demás idiomas muestran el inglés con una nota). La IA nunca ve las manos ocultas (el nivel 3 cuenta las fichas y deduce de los pases); los niveles 2 y 3 son igual de fuertes en Mexican Train, y los tres son aproximadamente iguales en Fives and Threes. Verificado con 500 partidas IA contra IA validadas de forma independiente por configuración (0 fallos), 227 escenarios de reglas escritos a mano (más 135 de la auditoría independiente) y fuzzing de la disposición. Sin red, sin telemetría, CSP estricta. Cada aproximación está marcada en la tabla de variantes y en las reglas de la aplicación. Licencia: MIT (véase LICENSE). Fuentes de las reglas: Pagat.com.
+Un atlas del dominó de un único archivo, sin conexión, con diez variantes jugables contra una IA local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador en doble-6/9/12, dos versiones latinas por equipos 2v2 y Mexican Train en doble-12) más cinco fichas solo documentadas (Chicken Foot, Bergen, Five Up, All Threes, versiones latinas regionales). El motor de reglas es puro y está separado de la interfaz, con mesa en serpentina, desplazamiento y zoom, juego completo con teclado e interfaz en 8 idiomas (los textos largos del atlas existen solo en rumano e inglés; los demás idiomas muestran el inglés con una nota). La IA nunca ve las manos ocultas (el nivel 3 cuenta las fichas y deduce de los pases); los niveles 2 y 3 son igual de fuertes en Mexican Train, y los tres son aproximadamente iguales en Fives and Threes. Verificado con 500 partidas IA contra IA validadas de forma independiente por configuración (0 fallos), 227 escenarios de reglas escritos a mano (más 135 de la auditoría independiente) y fuzzing de la disposición. Sin red, sin telemetría, CSP estricta. Cada aproximación está marcada en la tabla de variantes y en las reglas de la aplicación. Licencia: MIT (véase LICENSE). Fuentes de las reglas: Pagat.com.
 
 ## Auditoría independiente
 

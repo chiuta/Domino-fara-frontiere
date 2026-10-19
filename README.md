@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Last updated:** 2026-10-14
+**Version:** 1.2.0 · **Last updated:** 2026-10-19
+
+Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 A domino atlas and a game against a local AI: 10 playable variants (2–4 players, 2-versus-2 teams where the rule requires it) and 5 documented-only entries. A single HTML file, offline, no dependencies.
 
@@ -66,7 +68,7 @@ Only what is verified in the code and in the tests:
 
 ## Languages
 
-The interface elements (buttons, messages, log, results) are in Romanian, English, French, Italian, Spanish, Portuguese and German, with a switcher and auto-detection. **The long atlas texts (origin, rules, approximations) exist only in Romanian and English; in French, Italian, Spanish, Portuguese and German English is displayed, with the discreet note "text in English".** The parity of the translation keys is verified with a script (`tests/i18n-check.js`: 180 keys × 7 languages, no gaps, the same placeholders).
+The interface elements (buttons, messages, log, results) are in Romanian, English, French, Italian, Spanish, Portuguese, German and Hungarian, with a switcher and auto-detection. **The long atlas texts (origin, rules, approximations) exist only in Romanian and English; in French, Italian, Spanish, Portuguese, German and Hungarian English is displayed, with the discreet note "text in English".** The parity of the translation keys is verified with a script (`tests/i18n-check.js`: 180 keys × 7 languages, no gaps, the same placeholders).
 
 ## Privacy and network
 

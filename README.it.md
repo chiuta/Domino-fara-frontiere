@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.1.0 · **Ultimo aggiornamento:** 2026-10-14
+**Versione:** 1.2.0 · **Ultimo aggiornamento:** 2026-10-19
+
+Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlante del domino e gioco contro un'IA locale: 10 varianti giocabili (2–4 giocatori, squadre 2 contro 2 dove la regola lo richiede) e 5 schede solo documentate. Un unico file HTML, offline, senza dipendenze.
 
@@ -66,7 +68,7 @@ Non sono inclusi i «domino colorati» (termine ambiguo) e il Sebastopol (la pag
 
 ## Lingue
 
-Gli elementi dell'interfaccia (pulsanti, messaggi, registro, risultati) sono in rumeno, inglese, francese, italiano, spagnolo, portoghese e tedesco, con selettore e rilevamento automatico. **I testi lunghi dell'atlante (origine, regole, approssimazioni) esistono solo in rumeno e in inglese; in francese, italiano, spagnolo, portoghese e tedesco viene mostrato l'inglese, con la discreta nota «testo in inglese».** La parità delle chiavi di traduzione è verificata con uno script (`tests/i18n-check.js`: 180 chiavi × 7 lingue, senza lacune, stessi segnaposto).
+Gli elementi dell'interfaccia (pulsanti, messaggi, registro, risultati) sono in rumeno, inglese, francese, italiano, spagnolo, portoghese, tedesco e ungherese, con selettore e rilevamento automatico. **I testi lunghi dell'atlante (origine, regole, approssimazioni) esistono solo in rumeno e in inglese; in francese, italiano, spagnolo, portoghese, tedesco e ungherese viene mostrato l'inglese, con la discreta nota «testo in inglese».** La parità delle chiavi di traduzione è verificata con uno script (`tests/i18n-check.js`: 180 chiavi × 7 lingue, senza lacune, stessi segnaposto).
 
 ## Privacy e rete
 
@@ -128,7 +130,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Riepilogo in inglese
 
-Un atlante del domino in un unico file, offline, con dieci varianti giocabili contro un'IA locale (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador su double-6/9/12, due versioni latine a squadre 2v2 e Mexican Train su double-12) più cinque schede solo documentate (Chicken Foot, Bergen, Five Up, All Threes, versioni latine regionali). Il motore delle regole è puro e separato dall'interfaccia, con tavolo a serpentina, scorrimento e zoom, gioco completo da tastiera e interfaccia in 7 lingue (i testi lunghi dell'atlante esistono solo in rumeno e in inglese; le altre lingue mostrano l'inglese con una nota). L'IA non vede mai le mani nascoste (il livello 3 conta le tessere e deduce dai passi); i livelli 2 e 3 sono ugualmente forti al Mexican Train, e tutti e tre sono più o meno pari a Fives and Threes. Verificato con 500 partite IA contro IA convalidate in modo indipendente per configurazione (0 fallimenti), 227 scenari di regole scritti a mano (più 135 dell'audit indipendente) e fuzzing della disposizione. Nessuna rete, nessuna telemetria, CSP rigorosa. Ogni approssimazione è segnata nella tabella delle varianti e nelle regole dell'applicazione. Licenza: MIT (vedi LICENSE). Fonti delle regole: Pagat.com.
+Un atlante del domino in un unico file, offline, con dieci varianti giocabili contro un'IA locale (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador su double-6/9/12, due versioni latine a squadre 2v2 e Mexican Train su double-12) più cinque schede solo documentate (Chicken Foot, Bergen, Five Up, All Threes, versioni latine regionali). Il motore delle regole è puro e separato dall'interfaccia, con tavolo a serpentina, scorrimento e zoom, gioco completo da tastiera e interfaccia in 8 lingue (i testi lunghi dell'atlante esistono solo in rumeno e in inglese; le altre lingue mostrano l'inglese con una nota). L'IA non vede mai le mani nascoste (il livello 3 conta le tessere e deduce dai passi); i livelli 2 e 3 sono ugualmente forti al Mexican Train, e tutti e tre sono più o meno pari a Fives and Threes. Verificato con 500 partite IA contro IA convalidate in modo indipendente per configurazione (0 fallimenti), 227 scenari di regole scritti a mano (più 135 dell'audit indipendente) e fuzzing della disposizione. Nessuna rete, nessuna telemetria, CSP rigorosa. Ogni approssimazione è segnata nella tabella delle varianti e nelle regole dell'applicazione. Licenza: MIT (vedi LICENSE). Fonti delle regole: Pagat.com.
 
 ## Audit indipendente
 

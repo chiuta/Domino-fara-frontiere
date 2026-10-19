@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Zuletzt aktualisiert:** 2026-10-14
+**Version:** 1.2.0 · **Zuletzt aktualisiert:** 2026-10-19
+
+Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Domino-Atlas und Spiel gegen eine lokale KI: 10 spielbare Varianten (2–4 Spieler, Teams 2 gegen 2, wo die Regel es verlangt) und 5 nur dokumentierte Einträge. Eine einzige HTML-Datei, offline, ohne Abhängigkeiten.
 
@@ -66,7 +68,7 @@ Nicht enthalten sind „Farb-Dominos“ (mehrdeutiger Begriff) und Sebastopol (d
 
 ## Sprachen
 
-Die Oberflächenelemente (Schaltflächen, Meldungen, Protokoll, Ergebnisse) sind auf Rumänisch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch und Deutsch, mit Umschalter und automatischer Erkennung. **Die langen Atlastexte (Herkunft, Regeln, Näherungen) gibt es nur auf Rumänisch und Englisch; auf Französisch, Italienisch, Spanisch, Portugiesisch und Deutsch wird Englisch angezeigt, mit dem dezenten Hinweis „Text auf Englisch“.** Die Parität der Übersetzungsschlüssel wird mit einem Skript geprüft (`tests/i18n-check.js`: 180 Schlüssel × 7 Sprachen, ohne Lücken, dieselben Platzhalter).
+Die Oberflächenelemente (Schaltflächen, Meldungen, Protokoll, Ergebnisse) sind auf Rumänisch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch, mit Umschalter und automatischer Erkennung. **Die langen Atlastexte (Herkunft, Regeln, Näherungen) gibt es nur auf Rumänisch und Englisch; auf Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch wird Englisch angezeigt, mit dem dezenten Hinweis „Text auf Englisch“.** Die Parität der Übersetzungsschlüssel wird mit einem Skript geprüft (`tests/i18n-check.js`: 180 Schlüssel × 7 Sprachen, ohne Lücken, dieselben Platzhalter).
 
 ## Datenschutz und Netzwerk
 
@@ -128,7 +130,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Zusammenfassung auf Englisch
 
-Ein Domino-Atlas in einer einzigen Datei, offline, mit zehn spielbaren Varianten gegen eine lokale KI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador auf Doppel-6/9/12, zwei lateinische 2v2-Teamversionen und Mexican Train auf Doppel-12) plus fünf nur dokumentierten Einträgen (Chicken Foot, Bergen, Five Up, All Threes, regionale lateinische Versionen). Die Regel-Engine ist rein und von der Oberfläche getrennt, mit Schlangentisch, Scrollen und Zoom, vollständigem Tastaturspiel und einer Oberfläche in 7 Sprachen (die langen Atlastexte gibt es nur auf Rumänisch und Englisch; die anderen Sprachen zeigen Englisch mit einem Hinweis). Die KI sieht nie verdeckte Hände (Stufe 3 zählt Steine und schließt aus Passen); die Stufen 2 und 3 sind bei Mexican Train gleich stark, und alle drei sind bei Fives and Threes etwa gleich. Geprüft mit 500 unabhängig validierten KI-gegen-KI-Partien pro Konfiguration (0 Fehlschläge), 227 von Hand geschriebenen Regelszenarien (plus 135 aus dem unabhängigen Audit) und Layout-Fuzzing. Kein Netzwerk, keine Telemetrie, strenge CSP. Jede Näherung ist in der Variantentabelle und in den Regeln der App markiert. Lizenz: MIT (siehe LICENSE). Regelquellen: Pagat.com.
+Ein Domino-Atlas in einer einzigen Datei, offline, mit zehn spielbaren Varianten gegen eine lokale KI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador auf Doppel-6/9/12, zwei lateinische 2v2-Teamversionen und Mexican Train auf Doppel-12) plus fünf nur dokumentierten Einträgen (Chicken Foot, Bergen, Five Up, All Threes, regionale lateinische Versionen). Die Regel-Engine ist rein und von der Oberfläche getrennt, mit Schlangentisch, Scrollen und Zoom, vollständigem Tastaturspiel und einer Oberfläche in 8 Sprachen (die langen Atlastexte gibt es nur auf Rumänisch und Englisch; die anderen Sprachen zeigen Englisch mit einem Hinweis). Die KI sieht nie verdeckte Hände (Stufe 3 zählt Steine und schließt aus Passen); die Stufen 2 und 3 sind bei Mexican Train gleich stark, und alle drei sind bei Fives and Threes etwa gleich. Geprüft mit 500 unabhängig validierten KI-gegen-KI-Partien pro Konfiguration (0 Fehlschläge), 227 von Hand geschriebenen Regelszenarien (plus 135 aus dem unabhängigen Audit) und Layout-Fuzzing. Kein Netzwerk, keine Telemetrie, strenge CSP. Jede Näherung ist in der Variantentabelle und in den Regeln der App markiert. Lizenz: MIT (siehe LICENSE). Regelquellen: Pagat.com.
 
 ## Unabhängiges Audit
 
