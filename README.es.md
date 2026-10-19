@@ -128,7 +128,7 @@ MIT — véase el archivo `LICENSE`.
 
 Alexandru-Ionuț Chiuță (Alexio).
 
-## Resumen en inglés
+## Resumen
 
 Un atlas del dominó de un único archivo, sin conexión, con diez variantes jugables contra una IA local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador en doble-6/9/12, dos versiones latinas por equipos 2v2 y Mexican Train en doble-12) más cinco fichas solo documentadas (Chicken Foot, Bergen, Five Up, All Threes, versiones latinas regionales). El motor de reglas es puro y está separado de la interfaz, con mesa en serpentina, desplazamiento y zoom, juego completo con teclado e interfaz en 8 idiomas (los textos largos del atlas existen solo en rumano e inglés; los demás idiomas muestran el inglés con una nota). La IA nunca ve las manos ocultas (el nivel 3 cuenta las fichas y deduce de los pases); los niveles 2 y 3 son igual de fuertes en Mexican Train, y los tres son aproximadamente iguales en Fives and Threes. Verificado con 500 partidas IA contra IA validadas de forma independiente por configuración (0 fallos), 227 escenarios de reglas escritos a mano (más 135 de la auditoría independiente) y fuzzing de la disposición. Sin red, sin telemetría, CSP estricta. Cada aproximación está marcada en la tabla de variantes y en las reglas de la aplicación. Licencia: MIT (véase LICENSE). Fuentes de las reglas: Pagat.com.
 
