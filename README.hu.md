@@ -128,8 +128,7 @@ A „Mexican Train” és más terméknevek tulajdonosaik védjegyei lehetnek; a
 
 Alexandru-Ionuț Chiuță (Alexio).
 
-## Angol nyelvű összefoglaló
-
+## Összefoglaló
 Egyetlen fájlból álló, offline dominóatlasz tíz játszható változattal egy helyi MI ellen (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador dupla-6/9/12-n, két latin 2v2 csapatváltozat és Mexican Train dupla-12-n), valamint öt csak dokumentált lappal (Chicken Foot, Bergen, Five Up, All Threes, regionális latin változatok). A szabálymotor tiszta és elkülönül a felülettől, kígyózó asztallal, görgetéssel és nagyítással, teljes billentyűzetes játékkal és 8 nyelvű felülettel (az atlasz hosszú szövegei csak románul és angolul léteznek; a többi nyelv angolul jelenik meg megjegyzéssel). Az MI sosem látja a rejtett kezeket (a 3. szint számolja a köveket és a passzokból következtet); a 2. és 3. szint egyformán erős a Mexican Trainnél, a három szint pedig nagyjából egyenlő a Fives and Threesnél. Ellenőrizve konfigurációnként 500 függetlenül érvényesített MI–MI játszmával (0 hiba), 227 kézzel írt szabályforgatókönyvvel (plusz 135 a független auditból) és elrendezés-fuzzinggal. Hálózat és telemetria nélkül, szigorú CSP-vel. Minden közelítés meg van jelölve a változattáblázatban és az alkalmazás szabályaiban. Licenc: MIT (lásd LICENSE). Szabályforrások: Pagat.com.
 
 ## Független audit

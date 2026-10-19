@@ -128,8 +128,7 @@ MIT — siehe Datei `LICENSE`.
 
 Alexandru-Ionuț Chiuță (Alexio).
 
-## Zusammenfassung auf Englisch
-
+## Zusammenfassung
 Ein Domino-Atlas in einer einzigen Datei, offline, mit zehn spielbaren Varianten gegen eine lokale KI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador auf Doppel-6/9/12, zwei lateinische 2v2-Teamversionen und Mexican Train auf Doppel-12) plus fünf nur dokumentierten Einträgen (Chicken Foot, Bergen, Five Up, All Threes, regionale lateinische Versionen). Die Regel-Engine ist rein und von der Oberfläche getrennt, mit Schlangentisch, Scrollen und Zoom, vollständigem Tastaturspiel und einer Oberfläche in 8 Sprachen (die langen Atlastexte gibt es nur auf Rumänisch und Englisch; die anderen Sprachen zeigen Englisch mit einem Hinweis). Die KI sieht nie verdeckte Hände (Stufe 3 zählt Steine und schließt aus Passen); die Stufen 2 und 3 sind bei Mexican Train gleich stark, und alle drei sind bei Fives and Threes etwa gleich. Geprüft mit 500 unabhängig validierten KI-gegen-KI-Partien pro Konfiguration (0 Fehlschläge), 227 von Hand geschriebenen Regelszenarien (plus 135 aus dem unabhängigen Audit) und Layout-Fuzzing. Kein Netzwerk, keine Telemetrie, strenge CSP. Jede Näherung ist in der Variantentabelle und in den Regeln der App markiert. Lizenz: MIT (siehe LICENSE). Regelquellen: Pagat.com.
 
 ## Unabhängiges Audit

@@ -128,8 +128,7 @@ MIT — voir le fichier `LICENSE`.
 
 Alexandru-Ionuț Chiuță (Alexio).
 
-## Résumé en anglais
-
+## Résumé
 Un atlas du domino en un seul fichier, hors ligne, avec dix variantes jouables contre une IA locale (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador sur double-6/9/12, deux versions latines par équipes 2v2 et Mexican Train sur double-12) plus cinq fiches seulement documentées (Chicken Foot, Bergen, Five Up, All Threes, versions latines régionales). Le moteur de règles est pur et séparé de l'interface, avec une table en serpentin, défilement et zoom, jeu complet au clavier et interface en 8 langues (les longs textes de l'atlas n'existent qu'en roumain et en anglais ; les autres langues affichent l'anglais avec une note). L'IA ne voit jamais les mains cachées (le niveau 3 compte les pièces et déduit des passes) ; les niveaux 2 et 3 sont aussi forts au Mexican Train, et les trois sont à peu près égaux à Fives and Threes. Vérifié avec 500 parties IA contre IA validées indépendamment par configuration (0 échec), 227 scénarios de règles écrits à la main (plus 135 de l'audit indépendant) et un fuzzing de la disposition. Pas de réseau, pas de télémétrie, CSP stricte. Chaque approximation est marquée dans le tableau des variantes et dans les règles de l'application. Licence : MIT (voir LICENSE). Sources des règles : Pagat.com.
 
 ## Audit indépendant
