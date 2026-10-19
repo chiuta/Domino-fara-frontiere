@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "domino-fara-frontiere",
   "name": "Domino fără frontiere — atlas de variante și joc contra AI",
-  "version": "1.1.0",
-  "updated": "2026-10-14",
+  "version": "1.2.0",
+  "updated": "2026-10-19",
   "description": "Atlas de domino cu 10 variante jucabile contra unui AI local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador, domino latin 2v2, Mexican Train). Offline, fără rețea, fără cont.",
   "egress": [],
   "permissions": [
@@ -14,8 +14,8 @@
   "storageKeys": [
     "dff1"
   ],
-  "sizeBytes": 308822,
-  "sha256": "302e7c31f5f2cdd9396c74c9773418eaf47b7c048ec192a21afcc31f81dda810",
+  "sizeBytes": 315157,
+  "sha256": "d59a4959244d0cac6dd001613e8771e980cf6d1c7e10e9bda98372ffd867d2ed",
   "csp": {
     "present": true,
     "directives": {
