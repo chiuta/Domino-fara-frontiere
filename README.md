@@ -1,134 +1,131 @@
 # Domino fără frontiere
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Atlas de domino și joc contra unui AI local: 10 variante jucabile (2–4 jucători, echipe 2 contra 2 unde regula o cere) și 5 fișe doar documentate. Un singur fișier HTML, offline, fără dependențe.
+**Version:** 1.1.0 · **Last updated:** 2026-10-14
 
-**Live:** https://chiuta.github.io/Domino-fara-frontiere/
+A domino atlas and a game against a local AI: 10 playable variants (2–4 players, 2-versus-2 teams where the rule requires it) and 5 documented-only entries. A single HTML file, offline, no dependencies.
 
-![Captură: masă de domino latin, linie în serpentină cu capetele marcate](screenshot.png)
+**Live app:** https://chiuta.github.io/Domino-fara-frontiere/
 
-## Ce este
+![Screenshot: a Latin domino table, a snaking line with the ends marked](screenshot.png)
 
-Un atlas al dominoului (origine, reguli, aproximări) și, pentru variantele implementate, o masă de joc la care joci tu (locul 0) contra a 1–3 jucători AI. Motorul de reguli este separat de interfață în același fișier, ca să poată fi testat în Node. Interfața este în română și în încă 6 limbi (vezi „Limbi”).
+## What it is
 
-## Funcții
+An atlas of dominoes (origin, rules, approximations) and, for the implemented variants, a game table where you play (seat 0) against 1–3 AI players. The rules engine is separated from the interface in the same file, so that it can be tested in Node. The interface is in Romanian and in 6 more languages (see "Languages").
 
-Doar ce este verificat în cod și în teste:
+## Features
 
-- 10 variante jucabile, un motor parametrizat pentru „linie” (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador, domino latin) și un motor separat pentru Mexican Train.
-- Seturi double-6 (28 de piese), double-9 (55; doar la Matador) și double-12 (91; Mexican Train și Matador). Invariantul 28/55/91 este verificat la fiecare mutare în teste.
-- Piese SVG mari, cu punctele desenate; fiecare piesă din mână are `aria-label` de forma „5–3”. Opțiune „Cifre” în loc de puncte.
-- Masă în serpentină: linia se rupe la margine cu o piesă pusă pe verticală și își schimbă sensul; zero piese în afara ecranului (verificat pe 32 277 de instantanee la lățimi de 8–26 de coloane, fără suprapuneri și fără ieșiri din lățime); derulare și zoom (−, potrivire, +), inclusiv pe 390 px.
-- Spinner cu patru brațe (All Fives, Sniff); trenuri personale, tren mexican, marcaje și dubluri deschise (Mexican Train).
-- Primul jucător: cel mai mare dublu din mâini (sau 6-6 la dominoul latin); tragere din boneyard acolo unde regula o permite; blocaj (nimeni nu mai poate juca): câștigă cine are cele mai puține puncte rămase, cu regula de scor a fiecărei variante (descrisă în fișa variantei).
-- AI în trei niveluri care diferă real (vezi „Limite”): 1 aleatoriu/lacom, 2 euristici, 3 numără piesele jucate și deduce din pase ce nu are un adversar. AI-ul lucrează numai pe vederea publică + propria mână.
-- Sugestie (H), mod „arată mâinile AI” explicit și doar pentru învățat, sămânță opțională pentru partide reproductibile, statistici locale, temă luminoasă/întunecată (la prima deschidere se urmează preferința sistemului), 3 mărimi de text, auto-joc al mutării unice (tragere/pas).
-- „Anulează mutarea” (buton sau tasta U): revine la starea de dinaintea ultimei tale mutări (până la 40 de pași, inclusiv mutările AI făcute între timp; starea se clonează, nu se recalculează). O partidă în care ai folosit anularea nu intră în statistici.
-- Randomul: `crypto.getRandomValues` cu eșantionare prin respingere; cu sămânță, mulberry32 (aceeași eșantionare). Amestec Fisher–Yates.
-- Accesibilitate: joc complet de la tastatură, `aria-live` pe stare, focus vizibil, ținte tactile ≥ 44 px (măsurat pe 390 px; excepție: butoanele din subsolul de donații, ~29 px), focus de tastatură păstrat după fiecare mutare, contrast ≥ 4,5:1 (măsurat pe perechile de culori din ambele teme), `prefers-reduced-motion`, fără scroll orizontal la 390 px, `<noscript>`, `lang` dinamic.
+Only what is verified in the code and in the tests:
 
-## Variante
+- 10 playable variants, a parameterised engine for the "line" games (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador, Latin domino) and a separate engine for Mexican Train.
+- Sets of double-6 (28 tiles), double-9 (55; Matador only) and double-12 (91; Mexican Train and Matador). The 28/55/91 invariant is verified at every move in the tests.
+- Large SVG tiles, with the pips drawn; each tile in the hand has an `aria-label` of the form "5–3". A "Digits" option instead of pips.
+- Snaking table: the line breaks at the edge with a tile placed vertically and changes direction; zero tiles off-screen (verified on 32,277 snapshots at widths of 8–26 columns, with no overlaps and no overflow of the width); scroll and zoom (−, fit, +), including at 390 px.
+- Spinner with four arms (All Fives, Sniff); personal trains, the Mexican train, markers and open doubles (Mexican Train).
+- First player: the highest double in the hands (or 6-6 in Latin domino); drawing from the boneyard where the rule allows it; blocked game (nobody can play any more): whoever has the fewest points left wins, with each variant's scoring rule (described in the variant's sheet).
+- AI at three levels that really differ (see "Limits"): 1 random/greedy, 2 heuristics, 3 counts the tiles played and deduces from passes what an opponent does not have. The AI works only on the public view + its own hand.
+- Hint (H), an explicit "show the AI hands" mode only for learning, an optional seed for reproducible games, local statistics, light/dark theme (on first opening the system preference is followed), 3 text sizes, auto-play of the single move (draw/pass).
+- "Undo move" (button or the U key): goes back to the state before your last move (up to 40 steps, including the AI moves made in the meantime; the state is cloned, not recomputed). A game in which you used undo does not count in the statistics.
+- Randomness: `crypto.getRandomValues` with rejection sampling; with a seed, mulberry32 (the same sampling). Fisher–Yates shuffle.
+- Accessibility: full keyboard play, `aria-live` on the status, visible focus, touch targets ≥ 44 px (measured at 390 px; exception: the buttons in the donation footer, ~29 px), keyboard focus kept after every move, contrast ≥ 4.5:1 (measured on the colour pairs of both themes), `prefers-reduced-motion`, no horizontal scroll at 390 px, `<noscript>`, dynamic `lang`.
 
-| Variantă | Jucabil? | ⚠ Aproximări (pe scurt; textul complet e în fișa din aplicație) |
+## Variants
+
+| Variant | Playable? | ⚠ Approximations (in brief; the full text is in the in-app sheet) |
 |---|---|---|
-| Block (fără tragere) | da | – |
-| Draw (cu tragere din bon) | da | Mâini 7/7/6 (2/3/4 jucători), rezerva de 2 piese (Pagat); ⚠ tragerea voluntară nu e permisă (se trage doar când nu poți juca) |
-| All Fives (cu spinner) | da | ⚠ brațele 3–4 se deschid abia după ce spinnerul are ambele laturi acoperite (uz american); rotunjirea la 5 pe total, nu piesă cu piesă; la 3 jucători, egalitatea împarte jumătate rotunjită în jos |
-| Muggins (All Fives fără spinner) | da | ⚠ sursa e inconsistentă; s-a ales „cine iese încasează”; fără echipe |
-| Sniff | da | varianta americană (Sniff transversal = spinner); capetele laterale ale spinnerului se numără cât sunt libere (exemplul 8/14/15 de pe Pagat verificat); ⚠ rotunjire și blocaj neprecizate de sursă; fără echipe |
-| Fives and Threes | da | ⚠ fără echipe („chip out” pe parteneri); deschide cel mai mare dublu în loc de tragere la sorți; AI: nivelurile nu diferă măsurabil |
-| Matador (suma 7) | da | ⚠ matadorii pentru double-9/12 sunt extrapolați; sursa descrie doar 4 jucători (2–3 sunt extindere); mâna de 7 piese și la double-9/12; regula de pas aleasă: „tragi până poți juca sau rămân 2 piese” |
-| Domino latin pe echipe 2v2, stil venezuelean, țintă 100 | da | ⚠ versiunea mexicană (reguli de blocaj/start diferite) nu e implementată; doar varianta descrisă pe Pagat; Cuban/Dominican nu sunt reproduse; fără „refacerea mâinii”, fără bonusuri capicúa/chuchazo/dominao |
-| Domino latin 200 | da | ⚠ nici FID pur, nici „Doscientos” pur (hibrid); după blocaj începe jucătorul cu cele mai puține puncte din echipa câștigătoare; deschide 6-6 (FID alege prin tragere de piese); fără „Quinientos” și „Chiva” |
-| Mexican Train (double-12, trenuri personale) | da | ⚠ 2–4 jucători (sursa permite 10); 1, 3 sau 13 runde; dublul-alb la 50 doar ca opțiune; AI: nivelurile 2 și 3 sunt la fel de puternice |
-| Chicken Foot | doar în atlas | nu este implementat (aranjament în arbore) |
-| Bergen / Double Bergen | doar în atlas | scorarea Bergen nu este implementată |
-| Five Up | doar în atlas | regulile complete nu au fost verificate |
-| All Threes | doar în atlas | nu este implementat separat |
-| Variante latine regionale (Quinientos, Milo, Sudan) | doar în atlas | – |
+| Block (no drawing) | yes | – |
+| Draw (drawing from the boneyard) | yes | Hands 7/7/6 (2/3/4 players), a reserve of 2 tiles (Pagat); ⚠ voluntary drawing is not allowed (you draw only when you cannot play) |
+| All Fives (with spinner) | yes | ⚠ arms 3–4 open only after the spinner has both sides covered (American usage); rounding to 5 on the total, not tile by tile; with 3 players, a tie splits half rounded down |
+| Muggins (All Fives without spinner) | yes | ⚠ the source is inconsistent; "whoever goes out collects" was chosen; no teams |
+| Sniff | yes | the American variant (transverse Sniff = spinner); the side ends of the spinner are counted while they are free (the 8/14/15 example on Pagat verified); ⚠ rounding and blocking not specified by the source; no teams |
+| Fives and Threes | yes | ⚠ no teams ("chip out" on partners); opens with the highest double instead of drawing lots; AI: the levels do not measurably differ |
+| Matador (sum 7) | yes | ⚠ the matadors for double-9/12 are extrapolated; the source describes only 4 players (2–3 is an extension); the 7-tile hand also at double-9/12; the pass rule chosen: "you draw until you can play or 2 tiles remain" |
+| Latin domino in 2v2 teams, Venezuelan style, target 100 | yes | ⚠ the Mexican version (different blocking/start rules) is not implemented; only the variant described on Pagat; Cuban/Dominican are not reproduced; no "hand redo", no capicúa/chuchazo/dominao bonuses |
+| Latin domino 200 | yes | ⚠ neither pure FID nor pure "Doscientos" (a hybrid); after a block the player with the fewest points from the winning team starts; opens with 6-6 (FID chooses by drawing tiles); no "Quinientos" and "Chiva" |
+| Mexican Train (double-12, personal trains) | yes | ⚠ 2–4 players (the source allows 10); 1, 3 or 13 rounds; the blank double at 50 only as an option; AI: levels 2 and 3 are equally strong |
+| Chicken Foot | atlas only | not implemented (tree arrangement) |
+| Bergen / Double Bergen | atlas only | Bergen scoring is not implemented |
+| Five Up | atlas only | the full rules were not verified |
+| All Threes | atlas only | not implemented separately |
+| Regional Latin variants (Quinientos, Milo, Sudan) | atlas only | – |
 
-Nu sunt incluse „domino de culoare” (termen ambiguu) și Sebastopol (pagina sursă nu a putut fi consultată; nu se pretinde nimic despre ele).
+"Colour dominoes" (an ambiguous term) and Sebastopol are not included (the source page could not be consulted; nothing is claimed about them).
 
-**Varianta latină aleasă.** Dominoul latin pe echipe se joacă în mai multe versiuni regionale. S-a implementat versiunea venezueleană/mexicană descrisă pe Pagat (țintă 100, la sfârșit câștigătorul ia punctele pieselor rămase ale adversarilor) și versiunea de 200 (FID/„Doscientos”, se adună toate punctele rămase, câștigătorul mâinii deschide următoarea). Termenii: „pase” = abținerea de la mutare; „pase mutuală” = tranque, adică blocajul în care nimeni nu mai poate juca (câștigă echipa cu mai puține puncte, egalitatea nu dă puncte); „capot” = victorie cu adversarii la zero (definiție aleasă aici, nu normă federală).
+**The Latin variant chosen.** Latin partnership dominoes are played in several regional versions. The Venezuelan/Mexican version described on Pagat was implemented (target 100, at the end the winner takes the points of the opponents' remaining tiles) and the 200 version (FID/"Doscientos", all remaining points are added up, the winner of the hand opens the next). The terms: "pase" = abstaining from a move; "pase mutual" = tranque, that is the block in which nobody can play any more (the team with fewer points wins, a tie gives no points); "capot" = victory with the opponents at zero (a definition chosen here, not a federal norm).
 
-## Manual de utilizare
+## User guide
 
-1. În **Atlas**, alege o variantă și apasă „Joacă”. „Reguli” arată originea, regulile și aproximările.
-2. În fereastra de setări alege numărul de jucători, echipele (la 4), nivelul AI, eventual o sămânță; apasă „Joacă”.
-3. Când e rândul tău, piesele jucabile sunt ridicate și evidențiate. Apasă o piesă; dacă are o singură destinație se joacă imediat, altfel alegi destinația cu butoanele de sub mână sau apăsând un capăt marcat pe masă.
-4. Dacă nu ai mutare: „Trage” (D) sau „Pas” (P). Cu „Auto” activ, mutarea unică se face automat după o secundă.
-5. Mexican Train: prima ta tură poate fi un lanț de piese pe trenul tău, apoi „Termină tura” (E). Un dublu cere o piesă în plus; un dublu deschis trebuie satisfăcut. Când pasezi, îți pui marcajul pe tren.
-6. Tastatură: Tab până la mână, săgeți între piese, Enter pentru a juca; D, P, E, H (sugestie), U (anulează mutarea). Esc închide ferestrele.
-7. Butoanele din colț: limba, temă, mărime text, cifre, auto, statistici, despre. Zoom pe masă: −, ⤢, +.
+1. In the **Atlas**, choose a variant and press "Play". "Rules" shows the origin, the rules and the approximations.
+2. In the settings window choose the number of players, the teams (at 4), the AI level, possibly a seed; press "Play".
+3. When it is your turn, the playable tiles are raised and highlighted. Press a tile; if it has a single destination it is played immediately, otherwise you choose the destination with the buttons under the hand or by pressing a marked end on the table.
+4. If you have no move: "Draw" (D) or "Pass" (P). With "Auto" on, the single move is made automatically after a second.
+5. Mexican Train: your first turn can be a chain of tiles on your train, then "End turn" (E). A double requires an extra tile; an open double must be satisfied. When you pass, you put your marker on the train.
+6. Keyboard: Tab to the hand, arrows between tiles, Enter to play; D, P, E, H (hint), U (undo move). Esc closes the windows.
+7. The buttons in the corner: language, theme, text size, digits, auto, statistics, about. Zoom on the table: −, ⤢, +.
 
-## Limbi
+## Languages
 
-Elementele de interfață (butoane, mesaje, jurnal, rezultate) sunt în română, engleză, franceză, italiană, spaniolă, portugheză și germană, cu comutator și autodetecție. **Textele lungi ale atlasului (origine, reguli, aproximări) există doar în română și engleză; în franceză, italiană, spaniolă, portugheză și germană se afișează engleza, cu nota discretă „text în engleză”.** Paritatea cheilor de traducere este verificată cu un script (`tests/i18n-check.js`: 180 de chei × 7 limbi, fără goluri, aceleași substituenți).
+The interface elements (buttons, messages, log, results) are in Romanian, English, French, Italian, Spanish, Portuguese and German, with a switcher and auto-detection. **The long atlas texts (origin, rules, approximations) exist only in Romanian and English; in French, Italian, Spanish, Portuguese and German English is displayed, with the discreet note "text in English".** The parity of the translation keys is verified with a script (`tests/i18n-check.js`: 180 keys × 7 languages, no gaps, the same placeholders).
 
-## Confidențialitate și rețea
+## Privacy and network
 
-Fără telemetrie, fără cereri de rețea, fără `fetch`, fără `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (scriptul este legat prin hash; `style-src 'unsafe-inline'` este necesar pentru stilul inline și pentru blocul de sprijin). Preferințele și statisticile se păstrează în `localStorage` (cheia `dff1`), accesat doar în `try/catch`; fără el aplicația funcționează (testat cu `localStorage` blocat). `innerHTML` se folosește doar pentru SVG generat din numere întregi și șiruri trecute prin `esc()`. Singurele linkuri externe sunt Buy Me a Coffee din blocul de sprijin (`rel="noopener"`), copiat identic din celelalte repo-uri.
+No telemetry, no network requests, no `fetch`, no `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (the script is bound by hash; `style-src 'unsafe-inline'` is needed for the inline style and for the support block). Preferences and statistics are kept in `localStorage` (key `dff1`), accessed only in `try/catch`; without it the app works (tested with `localStorage` blocked). `innerHTML` is used only for SVG generated from integers and strings passed through `esc()`. The only external links are Buy Me a Coffee in the support block (`rel="noopener"`), copied identically from the other repos.
 
-## Limite și avertismente
+## Limits and warnings
 
-- **AI**: nu are acces la mâinile altora. Nivelul 1: aleatoriu (sau lacom pe puncte la jocurile cu scor la capete). Nivelul 2: euristici (puncte, flexibilitate, dubluri, păstrarea matadorilor). Nivelul 3: în plus numără piesele jucate, deduce din pase ce nu are un adversar și estimează probabilitatea ca adversarii să paseze. Forța măsurată (300 de partide, locuri alternate): nivelul 3 bate nivelul 1 în 54–98% din partide (în funcție de variantă) și nivelul 2 în 52–76%; nivelul 2 bate nivelul 1 în 48–98%. **Excepții**: la Fives and Threes nivelurile sunt practic egale (~50%), iar la Mexican Train nivelurile 2 și 3 sunt la fel de puternice (44% pentru nivelul 3 în fața lui 2), amândouă bat clar nivelul 1 (80–85%). Modul „arată mâinile AI” este explicit și doar pentru învățat; AI-ul nu se uită oricum la mâna ta.
-- Regulile unor jocuri diferă de la regiune la regiune; alegerile făcute sunt în coloana ⚠ și în fișele din aplicație.
-- Nu este un instrument de pariuri și nu are valoare oficială pentru federații.
-- Interfața a fost verificată vizual în Chromium (1280×800 și 390×844); nu a fost testată pe Safari, Firefox sau cu cititoare de ecran reale.
-- Nu a fost implementat modul multi-jucător în rețea (și nu va fi: aplicația nu are rețea).
+- **AI**: it has no access to other people's hands. Level 1: random (or greedy on points in the games scoring on the ends). Level 2: heuristics (points, flexibility, doubles, keeping the matadors). Level 3: additionally counts the tiles played, deduces from passes what an opponent does not have, and estimates the probability that the opponents will pass. The measured strength (300 games, alternating seats): level 3 beats level 1 in 54–98% of games (depending on the variant) and level 2 in 52–76%; level 2 beats level 1 in 48–98%. **Exceptions**: in Fives and Threes the levels are practically equal (~50%), and in Mexican Train levels 2 and 3 are equally strong (44% for level 3 against 2), both clearly beat level 1 (80–85%). The "show the AI hands" mode is explicit and only for learning; the AI does not look at your hand anyway.
+- The rules of some games differ from region to region; the choices made are in the ⚠ column and in the in-app sheets.
+- It is not a betting tool and has no official value for federations.
+- The interface was checked visually in Chromium (1280×800 and 390×844); it was not tested on Safari, Firefox or with real screen readers.
+- Networked multiplayer mode was not implemented (and will not be: the app has no network).
 
-## Teste
+## Tests
 
-Tot ce urmează s-a rulat pe `index.html` final (scripturile sunt păstrate în afara pachetului):
+All of the following was run on the final `index.html` (the scripts are kept outside the package):
 
-- **Partide AI contra AI**, 500 de partide pe configurație, validate pas cu pas de un validator independent de legalitate (reimplementat din reguli, fără cod din motor): Block 2/3/4, Draw 2/3/4, Matador double-6/9/12 la 2/3/4, All Fives 2/3/4 + echipe, Muggins 2/3/4, Sniff 2/3/4, Fives and Threes 2/3/4, latin 100 și latin 200; Mexican Train 2/3/4 × 500 de partide × 13 runde (19 500 de runde). Rezultat: **0 eșecuri** (fără blocaje de motor, fără mutări ilegale, invariant 28/55/91 la fiecare mutare, mâini și boneyard identice cu validatorul, punctele la capete egale cu cele calculate independent, câștigul de sfârșit de mână identic).
-- **Scenarii scrise de mână**: 227 de verificări, 0 eșecuri (scorare All Fives / Muggins / Fives and Threes pe capete, inclusiv dublu la capăt, spinner și lipsa spinnerului; Mexican Train: dubluri deschise pe trenul propriu, pe al altuia marcat/nemarcat și pe cel mexican, prima tură, marcaje, blocaj, dublul-alb la 50, 13 runde; AI fără acces la mâini).
-- **Aranjarea mesei**: 32 277 de instantanee, 12,7 milioane de verificări (fără suprapuneri, fără ieșiri din lățime, număr corect de piese), lățimi de la 8 la 26 de coloane.
-- **UI** (Playwright + Chromium): câte o partidă completă jucată prin interfață la fiecare variantă la 1280 px și 390 px, 0 erori în consolă, 0 încălcări CSP, 0 cereri externe, fără scroll orizontal; joc de la tastatură; `localStorage` blocat; autodetecție de limbă; ținte tactile ≥ 44 px (cu excepția subsolului).
+- **AI-versus-AI games**, 500 games per configuration, validated step by step by an independent legality validator (reimplemented from the rules, without code from the engine): Block 2/3/4, Draw 2/3/4, Matador double-6/9/12 at 2/3/4, All Fives 2/3/4 + teams, Muggins 2/3/4, Sniff 2/3/4, Fives and Threes 2/3/4, Latin 100 and Latin 200; Mexican Train 2/3/4 × 500 games × 13 rounds (19,500 rounds). Result: **0 failures** (no engine deadlocks, no illegal moves, the 28/55/91 invariant at every move, hands and boneyard identical to the validator, the end points equal to those computed independently, the end-of-hand win identical).
+- **Hand-written scenarios**: 227 checks, 0 failures (All Fives / Muggins / Fives and Threes scoring on the ends, including a double at the end, spinner and absence of the spinner; Mexican Train: open doubles on one's own train, on another's marked/unmarked one and on the Mexican one, first turn, markers, block, the blank double at 50, 13 rounds; AI without access to the hands).
+- **Table layout**: 32,277 snapshots, 12.7 million checks (no overlaps, no overflow of the width, correct number of tiles), widths from 8 to 26 columns.
+- **UI** (Playwright + Chromium): one complete game played through the interface for each variant at 1280 px and 390 px, 0 console errors, 0 CSP violations, 0 external requests, no horizontal scroll; keyboard play; `localStorage` blocked; language auto-detection; touch targets ≥ 44 px (except the footer).
 
-## Surse
+## Sources
 
-- Pagat.com: Muggins, Block, All Fives, Sniff, Fives and Threes, Matador, Bergen, Latin Partnership Dominoes, Mexican Train, Chicken Foot și paginile de familie (fives family, train family, matador matching, Bergen scoring). Regulile s-au citit și s-au implementat din text; unde sursa e inconsistentă sau tace, alegerea e marcată ⚠.
-- Pentru versiunile cubaneză, dominicană și Sebastopol nu s-a putut consulta o sursă; nu se pretinde că sunt reproduse.
+- Pagat.com: Muggins, Block, All Fives, Sniff, Fives and Threes, Matador, Bergen, Latin Partnership Dominoes, Mexican Train, Chicken Foot and the family pages (fives family, train family, matador matching, Bergen scoring). The rules were read and implemented from the text; where the source is inconsistent or silent, the choice is marked ⚠.
+- For the Cuban, Dominican and Sebastopol versions no source could be consulted; it is not claimed that they are reproduced.
 
-## Rulare locală
+## Running locally
 
-Deschide `index.html` într-un browser (nu cere server). Pentru a reconstrui din sursele de lucru: `node build.mjs`; pentru teste: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (scripturile se află în directorul de lucru, în afara pachetului publicat).
+Open `index.html` in a browser (it does not need a server). To rebuild from the working sources: `node build.mjs`; for tests: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (the scripts are in the working directory, outside the published package).
 
-## Istoric / Changelog
+## History / Changelog
 
-- 1.1.0 — 2026-10-14: Copie de rezervă și etichetare date (fff-kit).
+- 1.1.0 — 2026-10-14: Backup and data labelling (fff-kit).
 
-- 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație (prima versiune numerotată; în dialogul „Despre”).
+- 1.0.0 — 2026-10-12: the version and the date of the last update are shown in the app (first numbered version; in the "About" dialog).
 
-Runda 7:
-- O partidă începută (după prima mutare) și nefinalizată cere acum confirmarea browserului la reîncărcarea sau închiderea paginii (`beforeunload`), ca să nu pierzi accidental partida; după „game over” și înainte de prima mutare nu apare nicio întrebare. Partida nu este salvată între vizite. Hash-ul CSP recalculat; axe-core = 0 violări la 1280 și 360 px.
-- Suita `tests/` și `build.mjs` din secțiunea „Rulare locală” rămân în afara depozitului publicat (declarat și acolo); verificări: `node --check`, o partidă prin interfață, 0 erori de consolă/CSP.
+Round 7:
+- A game that has started (after the first move) and is not finished now asks for the browser's confirmation on reloading or closing the page (`beforeunload`), so that you do not lose the game by accident; after "game over" and before the first move no question appears. The game is not saved between visits. The CSP hash recalculated; axe-core = 0 violations at 1280 and 360 px.
+- The `tests/` suite and `build.mjs` from the "Running locally" section remain outside the published repository (stated there too); checks: `node --check`, one game through the interface, 0 console/CSP errors.
 
-Runda 6:
-- Nou: „Anulează mutarea” (U) cu stivă de 40 de stări; partidele cu anulare sunt excluse din statistici. Tema inițială urmează `prefers-color-scheme` dacă nu e salvată alta. Jurnalul de partidă poate fi derulat de la tastatură (reper cu `tabindex`). Hash-ul CSP recalculat.
-- Când ai ales o piesă care se poate pune la două capete, apare acum un mesaj vizibil „Alege unde pui …” deasupra butoanelor de destinație (înainte exista doar mesajul de stare).
-- Accesibilitate: titlurile cardurilor din atlas sunt h2 (ordine corectă sub h1), blocul de sprijin este reper `complementary`; axe-core = 0 violări la 1280 și 360 px. Hash-ul CSP al scriptului a fost recalculat.
-- Notă: suita de teste din README (`tests/`) și `build.mjs` nu se află în acest depozit; după modificare s-au verificat `node --check`, o partidă prin interfață și 0 erori de consolă/CSP.
+Round 6:
+- New: "Undo move" (U) with a stack of 40 states; games with undo are excluded from the statistics. The initial theme follows `prefers-color-scheme` if no other is saved. The game log can be scrolled from the keyboard (landmark with `tabindex`). The CSP hash recalculated.
+- When you have chosen a tile that can be placed at two ends, a visible message "Choose where to place …" now appears above the destination buttons (before there was only the status message).
+- Accessibility: the card titles in the atlas are h2 (correct order under h1), the support block is a `complementary` landmark; axe-core = 0 violations at 1280 and 360 px. The script's CSP hash was recalculated.
+- Note: the test suite from the README (`tests/`) and `build.mjs` are not in this repository; after the change `node --check`, one game through the interface and 0 console/CSP errors were verified.
 
-## Licență
+## License
 
-MIT — vezi fișierul `LICENSE`.
+MIT — see the `LICENSE` file.
 
-## Nume comerciale
+## Trade names
 
-„Mexican Train” și alte denumiri de produs pot fi mărci ale deținătorilor lor; aplicația nu este afiliată cu ei, iar denumirile sunt folosite descriptiv pentru reguli tradiționale de domino.
+"Mexican Train" and other product names may be trademarks of their holders; the app is not affiliated with them, and the names are used descriptively for traditional domino rules.
 
-## Autor
+## Author
 
 Alexandru-Ionuț Chiuță (Alexio).
 
-## English summary
+## Independent audit
 
-A single-file, offline domino atlas with ten playable variants against a local AI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador on double-6/9/12, two Latin 2v2 partnership versions, and Mexican Train on double-12) plus five documented-only entries (Chicken Foot, Bergen, Five Up, All Threes, regional Latin versions). The rules engine is pure and separate from the UI, with a snaking board, scroll and zoom, full keyboard play, and a 7-language UI (long atlas texts exist in Romanian and English only; other languages show English with a note). The AI never sees hidden hands (level 3 counts tiles and infers from passes); levels 2 and 3 are equally strong at Mexican Train, and all three are about equal at Fives and Threes. Verified with 500 independently-validated AI-vs-AI games per configuration (0 failures), 227 hand-written rule scenarios (plus 135 from the independent audit) and layout fuzzing. No network, no telemetry, strict CSP. Every approximation is marked in the variant table and in the in-app rules. License: MIT (see LICENSE). Rules sources: Pagat.com.
-
-
-## Audit independent
-
-Un audit adversarial separat a corectat: mâinile la Draw, scorarea Sniff, începătorul după blocaj la Latin 200, un crash la statistici corupte din localStorage, pierderea focusului de la tastatură, un fallback pentru mutare ilegală a AI-ului. Rulat pe versiunea finală: fuzz independent (line + train), 135 scenarii, test de informație ascunsă pentru AI, 6000 de table, RNG, i18n, plus testele constructorului.
+A separate adversarial audit corrected: the hands in Draw, Sniff scoring, the starting player after a block in Latin 200, a crash on statistics corrupted in localStorage, loss of keyboard focus, a fallback for an illegal AI move. Run on the final version: independent fuzz (line + train), 135 scenarios, a hidden-information test for the AI, 6000 boards, RNG, i18n, plus the builder's tests.
