@@ -10,7 +10,7 @@ Domino-Atlas und Spiel gegen eine lokale KI: 10 spielbare Varianten (2–4 Spiel
 
 **Online-App:** https://chiuta.github.io/Domino-fara-frontiere/
 
-![Screenshot: ein lateinischer Dominotisch, eine Schlangenlinie mit markierten Enden](screenshot.png)
+![Screenshot: ein lateinischer Dominotisch, eine Schlangenlinie mit markierten Enden](screenshot.de.png)
 
 ## Was es ist
 

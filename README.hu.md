@@ -10,7 +10,7 @@ Dominóatlasz és játék egy helyi MI ellen: 10 játszható változat (2–4 j�
 
 **Online alkalmazás:** https://chiuta.github.io/Domino-fara-frontiere/
 
-![Képernyőkép: latin dominóasztal, kígyózó sor megjelölt végekkel](screenshot.png)
+![Képernyőkép: latin dominóasztal, kígyózó sor megjelölt végekkel](screenshot.hu.png)
 
 ## Mi ez
 

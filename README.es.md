@@ -10,7 +10,7 @@ Atlas del dominó y juego contra una IA local: 10 variantes jugables (2–4 juga
 
 **Aplicación en línea:** https://chiuta.github.io/Domino-fara-frontiere/
 
-![Captura: mesa de dominó latino, línea en serpentina con los extremos marcados](screenshot.png)
+![Captura: mesa de dominó latino, línea en serpentina con los extremos marcados](screenshot.es.png)
 
 ## Qué es
 

@@ -10,7 +10,7 @@ Atlante del domino e gioco contro un'IA locale: 10 varianti giocabili (2–4 gio
 
 **Applicazione online:** https://chiuta.github.io/Domino-fara-frontiere/
 
-![Schermata: tavolo da domino latino, linea a serpentina con le estremità segnate](screenshot.png)
+![Schermata: tavolo da domino latino, linea a serpentina con le estremità segnate](screenshot.it.png)
 
 ## Che cos'è
 

@@ -10,7 +10,7 @@ Atlas de domino și joc contra unui AI local: 10 variante jucabile (2–4 jucăt
 
 **Live:** https://chiuta.github.io/Domino-fara-frontiere/
 
-![Captură: masă de domino latin, linie în serpentină cu capetele marcate](screenshot.png)
+![Captură: masă de domino latin, linie în serpentină cu capetele marcate](screenshot.ro.png)
 
 ## Ce este
 

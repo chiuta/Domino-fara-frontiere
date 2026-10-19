@@ -10,7 +10,7 @@ A domino atlas and a game against a local AI: 10 playable variants (2–4 player
 
 **Live app:** https://chiuta.github.io/Domino-fara-frontiere/
 
-![Screenshot: a Latin domino table, a snaking line with the ends marked](screenshot.png)
+![Screenshot: a Latin domino table, a snaking line with the ends marked](screenshot.en.png)
 
 ## What it is
 

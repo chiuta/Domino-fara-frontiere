@@ -10,7 +10,7 @@ Atlas du domino et jeu contre une IA locale : 10 variantes jouables (2 à 4 joue
 
 **Application en ligne :** https://chiuta.github.io/Domino-fara-frontiere/
 
-![Capture : table de domino latin, ligne en serpentin avec les extrémités marquées](screenshot.png)
+![Capture : table de domino latin, ligne en serpentin avec les extrémités marquées](screenshot.fr.png)
 
 ## Ce que c'est
 
