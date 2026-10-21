@@ -14,7 +14,7 @@ Dominóatlasz és játék egy helyi MI ellen: 10 játszható változat (2–4 j�
 
 ## Mi ez
 
-A dominó atlasza (eredet, szabályok, közelítések), a megvalósított változatokhoz pedig egy játékasztal, ahol te játszol (0. hely) 1–3 MI-játékos ellen. A szabálymotor ugyanabban a fájlban elkülönül a felülettől, hogy Node-ban tesztelhető legyen. A felület román nyelvű és további 6 nyelven érhető el (lásd „Nyelvek”).
+A dominó atlasza (eredet, szabályok, közelítések), a megvalósított változatokhoz pedig egy játékasztal, ahol te játszol (0. hely) 1–3 MI-játékos ellen. A szabálymotor ugyanabban a fájlban elkülönül a felülettől, hogy Node-ban tesztelhető legyen. A felület és az atlasz szövegei 8 nyelven érhetők el (lásd a „Nyelvek” szakaszt).
 
 ## Funkciók
 
@@ -68,7 +68,7 @@ Nem szerepelnek a „színes dominók” (félreérthető kifejezés) és a Seba
 
 ## Nyelvek
 
-A felület elemei (gombok, üzenetek, napló, eredmények) románul, angolul, franciául, olaszul, spanyolul, portugálul, németül és magyarul érhetők el, váltóval és automatikus felismeréssel. **Az atlasz hosszú szövegei (eredet, szabályok, közelítések) csak románul és angolul léteznek; franciául, olaszul, spanyolul, portugálul, németül és magyarul az angol jelenik meg, a „szöveg angolul” diszkrét megjegyzéssel.** A fordítási kulcsok paritását egy szkript ellenőrzi (`tests/i18n-check.js`: 180 kulcs × 7 nyelv, hézagok nélkül, azonos helyőrzőkkel).
+A felület elemei (gombok, üzenetek, napló, eredmények) románul, angolul, franciául, olaszul, spanyolul, portugálul, németül és magyarul érhetők el, váltóval és automatikus felismeréssel. **Az atlasz hosszú szövegei (eredet, leírás, szabályok, közelítések mind a 15 lapon) le vannak fordítva mind a 8 nyelvre, és a keresés az aktuális nyelvű nevet és leírást is átfogja. Változatlanul marad: a források listája (hivatkozások/URL-ek; a második sora románul marad) és a latin dominó kifejezései (pase, tranque, capot), a forrásnak megfelelően. A francia, olasz, spanyol, portugál, német és magyar fordítások automatikusak, anyanyelvi beszélők nem ellenőrizték.** A fordítási kulcsok paritását egy szkript ellenőrzi (`tests/i18n-check.js`: 180 kulcs × 7 nyelv, hézagok nélkül, azonos helyőrzőkkel).
 
 ## Adatvédelem és hálózat
 
@@ -102,6 +102,7 @@ Nyisd meg az `index.html` fájlt egy böngészőben (nem igényel kiszolgálót)
 
 ## Előzmények / Changelog
 
+- 1.2.1 — 2026-10-19: mind a 15 atlaszlap (név, eredet, leírás, szabályok, közelítések; kb. 21 000 karakter) le van fordítva fr, it, es, pt, de, hu nyelvre; a „szöveg angolul” megjegyzés már nem jelenik meg; a keresés az aktuális nyelvű nevet és leírást is átfogja.
 - 1.1.0 — 2026-10-14: Biztonsági mentés és adatcímkézés (fff-kit).
 
 - 1.0.0 — 2026-10-12: a verzió és az utolsó frissítés dátuma megjelenik az alkalmazásban (első számozott verzió; a „Névjegy” párbeszédablakban).
@@ -129,7 +130,7 @@ A „Mexican Train” és más terméknevek tulajdonosaik védjegyei lehetnek; a
 Alexandru-Ionuț Chiuță (Alexio).
 
 ## Összefoglaló
-Egyetlen fájlból álló, offline dominóatlasz tíz játszható változattal egy helyi MI ellen (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador dupla-6/9/12-n, két latin 2v2 csapatváltozat és Mexican Train dupla-12-n), valamint öt csak dokumentált lappal (Chicken Foot, Bergen, Five Up, All Threes, regionális latin változatok). A szabálymotor tiszta és elkülönül a felülettől, kígyózó asztallal, görgetéssel és nagyítással, teljes billentyűzetes játékkal és 8 nyelvű felülettel (az atlasz hosszú szövegei csak románul és angolul léteznek; a többi nyelv angolul jelenik meg megjegyzéssel). Az MI sosem látja a rejtett kezeket (a 3. szint számolja a köveket és a passzokból következtet); a 2. és 3. szint egyformán erős a Mexican Trainnél, a három szint pedig nagyjából egyenlő a Fives and Threesnél. Ellenőrizve konfigurációnként 500 függetlenül érvényesített MI–MI játszmával (0 hiba), 227 kézzel írt szabályforgatókönyvvel (plusz 135 a független auditból) és elrendezés-fuzzinggal. Hálózat és telemetria nélkül, szigorú CSP-vel. Minden közelítés meg van jelölve a változattáblázatban és az alkalmazás szabályaiban. Licenc: MIT (lásd LICENSE). Szabályforrások: Pagat.com.
+Egyetlen fájlból álló, offline dominóatlasz tíz játszható változattal egy helyi MI ellen (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador dupla-6/9/12-n, két latin 2v2 csapatváltozat és Mexican Train dupla-12-n), valamint öt csak dokumentált lappal (Chicken Foot, Bergen, Five Up, All Threes, regionális latin változatok). A szabálymotor tiszta és elkülönül a felülettől, kígyózó asztallal, görgetéssel és nagyítással, teljes billentyűzetes játékkal és 8 nyelvű felülettel (az atlasz hosszú szövegei is le vannak fordítva). Az MI sosem látja a rejtett kezeket (a 3. szint számolja a köveket és a passzokból következtet); a 2. és 3. szint egyformán erős a Mexican Trainnél, a három szint pedig nagyjából egyenlő a Fives and Threesnél. Ellenőrizve konfigurációnként 500 függetlenül érvényesített MI–MI játszmával (0 hiba), 227 kézzel írt szabályforgatókönyvvel (plusz 135 a független auditból) és elrendezés-fuzzinggal. Hálózat és telemetria nélkül, szigorú CSP-vel. Minden közelítés meg van jelölve a változattáblázatban és az alkalmazás szabályaiban. Licenc: MIT (lásd LICENSE). Szabályforrások: Pagat.com.
 
 ## Független audit
 

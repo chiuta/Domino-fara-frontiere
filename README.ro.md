@@ -14,7 +14,7 @@ Atlas de domino și joc contra unui AI local: 10 variante jucabile (2–4 jucăt
 
 ## Ce este
 
-Un atlas al dominoului (origine, reguli, aproximări) și, pentru variantele implementate, o masă de joc la care joci tu (locul 0) contra a 1–3 jucători AI. Motorul de reguli este separat de interfață în același fișier, ca să poată fi testat în Node. Interfața este în română și în încă 6 limbi (vezi „Limbi”).
+Un atlas al dominoului (origine, reguli, aproximări) și, pentru variantele implementate, o masă de joc la care joci tu (locul 0) contra a 1–3 jucători AI. Motorul de reguli este separat de interfață în același fișier, ca să poată fi testat în Node. Interfața și textele atlasului sunt disponibile în 8 limbi (vezi „Limbi”).
 
 ## Funcții
 
@@ -68,7 +68,7 @@ Nu sunt incluse „domino de culoare” (termen ambiguu) și Sebastopol (pagina 
 
 ## Limbi
 
-Elementele de interfață (butoane, mesaje, jurnal, rezultate) sunt în română, engleză, franceză, italiană, spaniolă, portugheză, germană și maghiară, cu comutator și autodetecție. **Textele lungi ale atlasului (origine, reguli, aproximări) există doar în română și engleză; în franceză, italiană, spaniolă, portugheză, germană și maghiară se afișează engleza, cu nota discretă „text în engleză”.** Paritatea cheilor de traducere este verificată cu un script (`tests/i18n-check.js`: 180 de chei × 7 limbi, fără goluri, aceleași substituenți).
+Elementele de interfață (butoane, mesaje, jurnal, rezultate) sunt în română, engleză, franceză, italiană, spaniolă, portugheză, germană și maghiară, cu comutator și autodetecție. **Textele lungi ale atlasului (origine, descriere, reguli, aproximări ale tuturor celor 15 fișe) sunt traduse în toate cele 8 limbi, iar căutarea cuprinde numele și descrierea în limba curentă. Rămân neschimbate: lista de surse (citări/URL-uri; a doua linie rămâne în română) și termenii dominoului latin (pase, tranque, capot), păstrați ca în sursă. Traducerile în franceză, italiană, spaniolă, portugheză, germană și maghiară sunt automate, neverificate de vorbitori nativi.** Paritatea cheilor de traducere este verificată cu un script (`tests/i18n-check.js`: 180 de chei × 7 limbi, fără goluri, aceleași substituenți).
 
 ## Confidențialitate și rețea
 
@@ -102,6 +102,7 @@ Deschide `index.html` într-un browser (nu cere server). Pentru a reconstrui din
 
 ## Istoric / Changelog
 
+- 1.2.1 — 2026-10-19: toate cele 15 fișe de atlas (nume, origine, descriere, reguli, aproximări; circa 21.000 de caractere) sunt traduse în fr, it, es, pt, de, hu; nota „text în engleză” nu mai apare; căutarea cuprinde numele și descrierea în limba curentă.
 - 1.1.0 — 2026-10-14: Copie de rezervă și etichetare date (fff-kit).
 
 - 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație (prima versiune numerotată; în dialogul „Despre”).
@@ -130,7 +131,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Rezumat
 
-Un atlas de domino offline într-un singur fișier, cu zece variante jucabile împotriva unui AI local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador pe dublu-6/9/12, două versiuni latine 2 contra 2 în parteneriat și Mexican Train pe dublu-12), plus cinci intrări doar documentate (Chicken Foot, Bergen, Five Up, All Threes, versiuni latine regionale). Motorul de reguli este pur și separat de interfață, cu tablă în serpentină, derulare și zoom, joc complet cu tastatura și interfață în 8 limbi (textele lungi din atlas există doar în română și engleză; celelalte limbi afișează engleza, cu o notă). AI-ul nu vede niciodată mâinile ascunse (nivelul 3 numără piesele și deduce din pase); nivelurile 2 și 3 sunt la fel de puternice la Mexican Train, iar toate trei sunt aproximativ egale la Fives and Threes. Verificat cu 500 de partide AI contra AI validate independent pentru fiecare configurație (0 eșecuri), 227 de scenarii de reguli scrise de mână (plus 135 din auditul independent) și teste fuzz ale aspectului. Fără rețea, fără telemetrie, CSP strict. Fiecare aproximare este marcată în tabelul variantelor și în regulile din aplicație. Licență: MIT (vezi LICENSE). Surse ale regulilor: Pagat.com.
+Un atlas de domino offline într-un singur fișier, cu zece variante jucabile împotriva unui AI local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador pe dublu-6/9/12, două versiuni latine 2 contra 2 în parteneriat și Mexican Train pe dublu-12), plus cinci intrări doar documentate (Chicken Foot, Bergen, Five Up, All Threes, versiuni latine regionale). Motorul de reguli este pur și separat de interfață, cu tablă în serpentină, derulare și zoom, joc complet cu tastatura și interfață în 8 limbi (și textele lungi din atlas sunt traduse). AI-ul nu vede niciodată mâinile ascunse (nivelul 3 numără piesele și deduce din pase); nivelurile 2 și 3 sunt la fel de puternice la Mexican Train, iar toate trei sunt aproximativ egale la Fives and Threes. Verificat cu 500 de partide AI contra AI validate independent pentru fiecare configurație (0 eșecuri), 227 de scenarii de reguli scrise de mână (plus 135 din auditul independent) și teste fuzz ale aspectului. Fără rețea, fără telemetrie, CSP strict. Fiecare aproximare este marcată în tabelul variantelor și în regulile din aplicație. Licență: MIT (vezi LICENSE). Surse ale regulilor: Pagat.com.
 
 ## Audit independent
 

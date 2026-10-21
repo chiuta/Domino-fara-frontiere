@@ -14,7 +14,7 @@ Atlante del domino e gioco contro un'IA locale: 10 varianti giocabili (2–4 gio
 
 ## Che cos'è
 
-Un atlante del domino (origine, regole, approssimazioni) e, per le varianti implementate, un tavolo da gioco al quale giochi tu (posto 0) contro 1–3 giocatori IA. Il motore delle regole è separato dall'interfaccia nello stesso file, in modo da poter essere testato in Node. L'interfaccia è in rumeno e in altre 6 lingue (vedi «Lingue»).
+Un atlante del domino (origine, regole, approssimazioni) e, per le varianti implementate, un tavolo da gioco al quale giochi tu (posto 0) contro 1–3 giocatori IA. Il motore delle regole è separato dall'interfaccia nello stesso file, in modo da poter essere testato in Node. L'interfaccia e i testi dell'atlante sono disponibili in 8 lingue (vedi «Lingue»).
 
 ## Funzioni
 
@@ -68,7 +68,7 @@ Non sono inclusi i «domino colorati» (termine ambiguo) e il Sebastopol (la pag
 
 ## Lingue
 
-Gli elementi dell'interfaccia (pulsanti, messaggi, registro, risultati) sono in rumeno, inglese, francese, italiano, spagnolo, portoghese, tedesco e ungherese, con selettore e rilevamento automatico. **I testi lunghi dell'atlante (origine, regole, approssimazioni) esistono solo in rumeno e in inglese; in francese, italiano, spagnolo, portoghese, tedesco e ungherese viene mostrato l'inglese, con la discreta nota «testo in inglese».** La parità delle chiavi di traduzione è verificata con uno script (`tests/i18n-check.js`: 180 chiavi × 7 lingue, senza lacune, stessi segnaposto).
+Gli elementi dell'interfaccia (pulsanti, messaggi, registro, risultati) sono in rumeno, inglese, francese, italiano, spagnolo, portoghese, tedesco e ungherese, con selettore e rilevamento automatico. **I testi lunghi dell'atlante (origine, descrizione, regole, approssimazioni di tutte le 15 schede) sono tradotti in tutte le 8 lingue, e la ricerca include il nome e la descrizione nella lingua corrente. Restano invariati: l'elenco delle fonti (citazioni/URL; la seconda riga resta in rumeno) e i termini del domino latino (pase, tranque, capot), mantenuti come nella fonte. Le traduzioni in francese, italiano, spagnolo, portoghese, tedesco e ungherese sono automatiche, non verificate da madrelingua.** La parità delle chiavi di traduzione è verificata con uno script (`tests/i18n-check.js`: 180 chiavi × 7 lingue, senza lacune, stessi segnaposto).
 
 ## Privacy e rete
 
@@ -102,6 +102,7 @@ Apri `index.html` in un browser (non richiede un server). Per ricostruire dalle 
 
 ## Cronologia / Changelog
 
+- 1.2.1 — 2026-10-19: tutte le 15 schede dell'atlante (nome, origine, descrizione, regole, approssimazioni; circa 21.000 caratteri) sono tradotte in fr, it, es, pt, de, hu; la nota «testo in inglese» non compare più; la ricerca include il nome e la descrizione nella lingua corrente.
 - 1.1.0 — 2026-10-14: Copia di riserva ed etichettatura dei dati (fff-kit).
 
 - 1.0.0 — 2026-10-12: la versione e la data dell'ultimo aggiornamento sono mostrate nell'applicazione (prima versione numerata; nella finestra «Informazioni»).
@@ -129,7 +130,7 @@ MIT — vedi il file `LICENSE`.
 Alexandru-Ionuț Chiuță (Alexio).
 
 ## Riepilogo
-Un atlante del domino in un unico file, offline, con dieci varianti giocabili contro un'IA locale (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador su double-6/9/12, due versioni latine a squadre 2v2 e Mexican Train su double-12) più cinque schede solo documentate (Chicken Foot, Bergen, Five Up, All Threes, versioni latine regionali). Il motore delle regole è puro e separato dall'interfaccia, con tavolo a serpentina, scorrimento e zoom, gioco completo da tastiera e interfaccia in 8 lingue (i testi lunghi dell'atlante esistono solo in rumeno e in inglese; le altre lingue mostrano l'inglese con una nota). L'IA non vede mai le mani nascoste (il livello 3 conta le tessere e deduce dai passi); i livelli 2 e 3 sono ugualmente forti al Mexican Train, e tutti e tre sono più o meno pari a Fives and Threes. Verificato con 500 partite IA contro IA convalidate in modo indipendente per configurazione (0 fallimenti), 227 scenari di regole scritti a mano (più 135 dell'audit indipendente) e fuzzing della disposizione. Nessuna rete, nessuna telemetria, CSP rigorosa. Ogni approssimazione è segnata nella tabella delle varianti e nelle regole dell'applicazione. Licenza: MIT (vedi LICENSE). Fonti delle regole: Pagat.com.
+Un atlante del domino in un unico file, offline, con dieci varianti giocabili contro un'IA locale (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador su double-6/9/12, due versioni latine a squadre 2v2 e Mexican Train su double-12) più cinque schede solo documentate (Chicken Foot, Bergen, Five Up, All Threes, versioni latine regionali). Il motore delle regole è puro e separato dall'interfaccia, con tavolo a serpentina, scorrimento e zoom, gioco completo da tastiera e interfaccia in 8 lingue (anche i testi lunghi dell'atlante sono tradotti). L'IA non vede mai le mani nascoste (il livello 3 conta le tessere e deduce dai passi); i livelli 2 e 3 sono ugualmente forti al Mexican Train, e tutti e tre sono più o meno pari a Fives and Threes. Verificato con 500 partite IA contro IA convalidate in modo indipendente per configurazione (0 fallimenti), 227 scenari di regole scritti a mano (più 135 dell'audit indipendente) e fuzzing della disposizione. Nessuna rete, nessuna telemetria, CSP rigorosa. Ogni approssimazione è segnata nella tabella delle varianti e nelle regole dell'applicazione. Licenza: MIT (vedi LICENSE). Fonti delle regole: Pagat.com.
 
 ## Audit indipendente
 

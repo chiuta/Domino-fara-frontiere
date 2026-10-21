@@ -14,7 +14,7 @@ Domino-Atlas und Spiel gegen eine lokale KI: 10 spielbare Varianten (2–4 Spiel
 
 ## Was es ist
 
-Ein Atlas des Dominospiels (Herkunft, Regeln, Näherungen) und, für die implementierten Varianten, ein Spieltisch, an dem du (Platz 0) gegen 1–3 KI-Spieler spielst. Die Regel-Engine ist in derselben Datei von der Oberfläche getrennt, damit sie in Node getestet werden kann. Die Oberfläche ist auf Rumänisch und in 6 weiteren Sprachen (siehe „Sprachen“).
+Ein Atlas des Dominospiels (Herkunft, Regeln, Näherungen) und, für die implementierten Varianten, ein Spieltisch, an dem du (Platz 0) gegen 1–3 KI-Spieler spielst. Die Regel-Engine ist in derselben Datei von der Oberfläche getrennt, damit sie in Node getestet werden kann. Die Oberfläche und die Atlastexte liegen in 8 Sprachen vor (siehe „Sprachen“).
 
 ## Funktionen
 
@@ -68,7 +68,7 @@ Nicht enthalten sind „Farb-Dominos“ (mehrdeutiger Begriff) und Sebastopol (d
 
 ## Sprachen
 
-Die Oberflächenelemente (Schaltflächen, Meldungen, Protokoll, Ergebnisse) sind auf Rumänisch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch, mit Umschalter und automatischer Erkennung. **Die langen Atlastexte (Herkunft, Regeln, Näherungen) gibt es nur auf Rumänisch und Englisch; auf Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch wird Englisch angezeigt, mit dem dezenten Hinweis „Text auf Englisch“.** Die Parität der Übersetzungsschlüssel wird mit einem Skript geprüft (`tests/i18n-check.js`: 180 Schlüssel × 7 Sprachen, ohne Lücken, dieselben Platzhalter).
+Die Oberflächenelemente (Schaltflächen, Meldungen, Protokoll, Ergebnisse) sind auf Rumänisch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch, Deutsch und Ungarisch, mit Umschalter und automatischer Erkennung. **Die langen Atlastexte (Herkunft, Beschreibung, Regeln, Näherungen aller 15 Karten) sind in alle 8 Sprachen übersetzt, und die Suche umfasst Name und Beschreibung in der aktuellen Sprache. Unverändert bleiben: die Quellenliste (Zitate/URLs; ihre zweite Zeile bleibt auf Rumänisch) und die Begriffe des lateinischen Dominos (pase, tranque, capot), wie in der Quelle belassen. Die Übersetzungen ins Französische, Italienische, Spanische, Portugiesische, Deutsche und Ungarische sind automatisch und nicht von Muttersprachlern geprüft.** Die Parität der Übersetzungsschlüssel wird mit einem Skript geprüft (`tests/i18n-check.js`: 180 Schlüssel × 7 Sprachen, ohne Lücken, dieselben Platzhalter).
 
 ## Datenschutz und Netzwerk
 
@@ -102,6 +102,7 @@ Alles Folgende wurde auf der finalen `index.html` ausgeführt (die Skripte werde
 
 ## Verlauf / Changelog
 
+- 1.2.1 — 2026-10-19: alle 15 Atlaskarten (Name, Herkunft, Beschreibung, Regeln, Näherungen; rund 21.000 Zeichen) sind nach fr, it, es, pt, de, hu übersetzt; der Hinweis „Text auf Englisch“ erscheint nicht mehr; die Suche umfasst Name und Beschreibung in der aktuellen Sprache.
 - 1.1.0 — 2026-10-14: Datensicherung und Datenkennzeichnung (fff-kit).
 
 - 1.0.0 — 2026-10-12: Version und Datum der letzten Aktualisierung werden in der App angezeigt (erste nummerierte Version; im Dialog „Über“).
@@ -129,7 +130,7 @@ MIT — siehe Datei `LICENSE`.
 Alexandru-Ionuț Chiuță (Alexio).
 
 ## Zusammenfassung
-Ein Domino-Atlas in einer einzigen Datei, offline, mit zehn spielbaren Varianten gegen eine lokale KI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador auf Doppel-6/9/12, zwei lateinische 2v2-Teamversionen und Mexican Train auf Doppel-12) plus fünf nur dokumentierten Einträgen (Chicken Foot, Bergen, Five Up, All Threes, regionale lateinische Versionen). Die Regel-Engine ist rein und von der Oberfläche getrennt, mit Schlangentisch, Scrollen und Zoom, vollständigem Tastaturspiel und einer Oberfläche in 8 Sprachen (die langen Atlastexte gibt es nur auf Rumänisch und Englisch; die anderen Sprachen zeigen Englisch mit einem Hinweis). Die KI sieht nie verdeckte Hände (Stufe 3 zählt Steine und schließt aus Passen); die Stufen 2 und 3 sind bei Mexican Train gleich stark, und alle drei sind bei Fives and Threes etwa gleich. Geprüft mit 500 unabhängig validierten KI-gegen-KI-Partien pro Konfiguration (0 Fehlschläge), 227 von Hand geschriebenen Regelszenarien (plus 135 aus dem unabhängigen Audit) und Layout-Fuzzing. Kein Netzwerk, keine Telemetrie, strenge CSP. Jede Näherung ist in der Variantentabelle und in den Regeln der App markiert. Lizenz: MIT (siehe LICENSE). Regelquellen: Pagat.com.
+Ein Domino-Atlas in einer einzigen Datei, offline, mit zehn spielbaren Varianten gegen eine lokale KI (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador auf Doppel-6/9/12, zwei lateinische 2v2-Teamversionen und Mexican Train auf Doppel-12) plus fünf nur dokumentierten Einträgen (Chicken Foot, Bergen, Five Up, All Threes, regionale lateinische Versionen). Die Regel-Engine ist rein und von der Oberfläche getrennt, mit Schlangentisch, Scrollen und Zoom, vollständigem Tastaturspiel und einer Oberfläche in 8 Sprachen (auch die langen Atlastexte sind übersetzt). Die KI sieht nie verdeckte Hände (Stufe 3 zählt Steine und schließt aus Passen); die Stufen 2 und 3 sind bei Mexican Train gleich stark, und alle drei sind bei Fives and Threes etwa gleich. Geprüft mit 500 unabhängig validierten KI-gegen-KI-Partien pro Konfiguration (0 Fehlschläge), 227 von Hand geschriebenen Regelszenarien (plus 135 aus dem unabhängigen Audit) und Layout-Fuzzing. Kein Netzwerk, keine Telemetrie, strenge CSP. Jede Näherung ist in der Variantentabelle und in den Regeln der App markiert. Lizenz: MIT (siehe LICENSE). Regelquellen: Pagat.com.
 
 ## Unabhängiges Audit
 

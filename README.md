@@ -14,7 +14,7 @@ A domino atlas and a game against a local AI: 10 playable variants (2–4 player
 
 ## What it is
 
-An atlas of dominoes (origin, rules, approximations) and, for the implemented variants, a game table where you play (seat 0) against 1–3 AI players. The rules engine is separated from the interface in the same file, so that it can be tested in Node. The interface is in Romanian and in 6 more languages (see "Languages").
+An atlas of dominoes (origin, rules, approximations) and, for the implemented variants, a game table where you play (seat 0) against 1–3 AI players. The rules engine is separated from the interface in the same file, so that it can be tested in Node. The interface and the atlas texts are available in 8 languages (see "Languages").
 
 ## Features
 
@@ -68,7 +68,7 @@ Only what is verified in the code and in the tests:
 
 ## Languages
 
-The interface elements (buttons, messages, log, results) are in Romanian, English, French, Italian, Spanish, Portuguese, German and Hungarian, with a switcher and auto-detection. **The long atlas texts (origin, rules, approximations) exist only in Romanian and English; in French, Italian, Spanish, Portuguese, German and Hungarian English is displayed, with the discreet note "text in English".** The parity of the translation keys is verified with a script (`tests/i18n-check.js`: 180 keys × 7 languages, no gaps, the same placeholders).
+The interface elements (buttons, messages, log, results) are in Romanian, English, French, Italian, Spanish, Portuguese, German and Hungarian, with a switcher and auto-detection. **The long atlas texts (origin, description, rules, approximations of all 15 sheets) are translated into all 8 languages, and the search covers the name and the description in the current language. Left as they are: the list of sources (citations/URLs; its second line stays in Romanian) and the Latin-domino terms (pase, tranque, capot), kept as in the source. The French, Italian, Spanish, Portuguese, German and Hungarian translations are automatic and not verified by native speakers.** The parity of the translation keys is verified with a script (`tests/i18n-check.js`: 180 keys × 7 languages, no gaps, the same placeholders).
 
 ## Privacy and network
 
@@ -102,6 +102,7 @@ Open `index.html` in a browser (it does not need a server). To rebuild from the 
 
 ## History / Changelog
 
+- 1.2.1 — 2026-10-19: all 15 atlas sheets (name, origin, description, rules, approximations; about 21,000 characters) are translated into fr, it, es, pt, de, hu; the "text in English" note no longer appears; the search covers the name and description in the current language.
 - 1.1.0 — 2026-10-14: Backup and data labelling (fff-kit).
 
 - 1.0.0 — 2026-10-12: the version and the date of the last update are shown in the app (first numbered version; in the "About" dialog).

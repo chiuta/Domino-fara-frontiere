@@ -14,7 +14,7 @@ Atlas del dominó y juego contra una IA local: 10 variantes jugables (2–4 juga
 
 ## Qué es
 
-Un atlas del dominó (origen, reglas, aproximaciones) y, para las variantes implementadas, una mesa de juego en la que juegas tú (asiento 0) contra 1–3 jugadores IA. El motor de reglas está separado de la interfaz en el mismo archivo, para poder probarse en Node. La interfaz está en rumano y en otros 6 idiomas (véase «Idiomas»).
+Un atlas del dominó (origen, reglas, aproximaciones) y, para las variantes implementadas, una mesa de juego en la que juegas tú (asiento 0) contra 1–3 jugadores IA. El motor de reglas está separado de la interfaz en el mismo archivo, para poder probarse en Node. La interfaz y los textos del atlas están disponibles en 8 idiomas (véase «Idiomas»).
 
 ## Funciones
 
@@ -68,7 +68,7 @@ No se incluyen los «dominós de colores» (término ambiguo) ni el Sebastopol (
 
 ## Idiomas
 
-Los elementos de la interfaz (botones, mensajes, registro, resultados) están en rumano, inglés, francés, italiano, español, portugués, alemán y húngaro, con selector y autodetección. **Los textos largos del atlas (origen, reglas, aproximaciones) existen solo en rumano e inglés; en francés, italiano, español, portugués, alemán y húngaro se muestra el inglés, con la discreta nota «texto en inglés».** La paridad de las claves de traducción se verifica con un script (`tests/i18n-check.js`: 180 claves × 7 idiomas, sin huecos, los mismos marcadores de posición).
+Los elementos de la interfaz (botones, mensajes, registro, resultados) están en rumano, inglés, francés, italiano, español, portugués, alemán y húngaro, con selector y autodetección. **Los textos largos del atlas (origen, descripción, reglas, aproximaciones de las 15 fichas) están traducidos a los 8 idiomas, y la búsqueda abarca el nombre y la descripción en el idioma actual. Permanecen sin cambios: la lista de fuentes (citas/URL; su segunda línea sigue en rumano) y los términos del dominó latino (pase, tranque, capot), conservados como en la fuente. Las traducciones al francés, italiano, español, portugués, alemán y húngaro son automáticas, no verificadas por hablantes nativos.** La paridad de las claves de traducción se verifica con un script (`tests/i18n-check.js`: 180 claves × 7 idiomas, sin huecos, los mismos marcadores de posición).
 
 ## Privacidad y red
 
@@ -102,6 +102,7 @@ Abre `index.html` en un navegador (no requiere servidor). Para reconstruir a par
 
 ## Historial / Changelog
 
+- 1.2.1 — 2026-10-19: las 15 fichas del atlas (nombre, origen, descripción, reglas, aproximaciones; unos 21 000 caracteres) están traducidas a fr, it, es, pt, de, hu; la nota «texto en inglés» ya no aparece; la búsqueda abarca el nombre y la descripción en el idioma actual.
 - 1.1.0 — 2026-10-14: Copia de seguridad y etiquetado de datos (fff-kit).
 
 - 1.0.0 — 2026-10-12: la versión y la fecha de la última actualización se muestran en la aplicación (primera versión numerada; en el cuadro «Acerca de»).
@@ -130,7 +131,7 @@ Alexandru-Ionuț Chiuță (Alexio).
 
 ## Resumen
 
-Un atlas del dominó de un único archivo, sin conexión, con diez variantes jugables contra una IA local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador en doble-6/9/12, dos versiones latinas por equipos 2v2 y Mexican Train en doble-12) más cinco fichas solo documentadas (Chicken Foot, Bergen, Five Up, All Threes, versiones latinas regionales). El motor de reglas es puro y está separado de la interfaz, con mesa en serpentina, desplazamiento y zoom, juego completo con teclado e interfaz en 8 idiomas (los textos largos del atlas existen solo en rumano e inglés; los demás idiomas muestran el inglés con una nota). La IA nunca ve las manos ocultas (el nivel 3 cuenta las fichas y deduce de los pases); los niveles 2 y 3 son igual de fuertes en Mexican Train, y los tres son aproximadamente iguales en Fives and Threes. Verificado con 500 partidas IA contra IA validadas de forma independiente por configuración (0 fallos), 227 escenarios de reglas escritos a mano (más 135 de la auditoría independiente) y fuzzing de la disposición. Sin red, sin telemetría, CSP estricta. Cada aproximación está marcada en la tabla de variantes y en las reglas de la aplicación. Licencia: MIT (véase LICENSE). Fuentes de las reglas: Pagat.com.
+Un atlas del dominó de un único archivo, sin conexión, con diez variantes jugables contra una IA local (Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador en doble-6/9/12, dos versiones latinas por equipos 2v2 y Mexican Train en doble-12) más cinco fichas solo documentadas (Chicken Foot, Bergen, Five Up, All Threes, versiones latinas regionales). El motor de reglas es puro y está separado de la interfaz, con mesa en serpentina, desplazamiento y zoom, juego completo con teclado e interfaz en 8 idiomas (los textos largos del atlas también están traducidos). La IA nunca ve las manos ocultas (el nivel 3 cuenta las fichas y deduce de los pases); los niveles 2 y 3 son igual de fuertes en Mexican Train, y los tres son aproximadamente iguales en Fives and Threes. Verificado con 500 partidas IA contra IA validadas de forma independiente por configuración (0 fallos), 227 escenarios de reglas escritos a mano (más 135 de la auditoría independiente) y fuzzing de la disposición. Sin red, sin telemetría, CSP estricta. Cada aproximación está marcada en la tabla de variantes y en las reglas de la aplicación. Licencia: MIT (véase LICENSE). Fuentes de las reglas: Pagat.com.
 
 ## Auditoría independiente
 
