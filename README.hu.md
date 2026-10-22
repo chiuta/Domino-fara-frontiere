@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.4 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 1.2.5 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -101,6 +101,10 @@ Minden alábbi a végleges `index.html`-en futott (a szkriptek a csomagon kívü
 Nyisd meg az `index.html` fájlt egy böngészőben (nem igényel kiszolgálót). A munkaforrásokból való újraépítéshez: `node build.mjs`; a tesztekhez: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (a szkriptek a munkakönyvtárban találhatók, a közzétett csomagon kívül).
 
 ## Előzmények / Changelog
+
+### 1.2.5 — 2026-10-22
+
+fff-kit 1.1.4: érintési célok és minimális szövegméret.
 
 ### 1.2.4 — 2026-10-22
 

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.4 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 1.2.5 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -101,6 +101,10 @@ Alles Folgende wurde auf der finalen `index.html` ausgeführt (die Skripte werde
 Öffne `index.html` in einem Browser (es wird kein Server benötigt). Zum Neuaufbau aus den Arbeitsquellen: `node build.mjs`; für Tests: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (die Skripte liegen im Arbeitsverzeichnis, außerhalb des veröffentlichten Pakets).
 
 ## Verlauf / Changelog
+
+### 1.2.5 — 2026-10-22
+
+fff-kit 1.1.4: Touch-Ziele und Mindestschriftgröße.
 
 ### 1.2.4 — 2026-10-22
 

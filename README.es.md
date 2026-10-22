@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.4 · **Última actualización:** 2026-10-22
+**Versión:** 1.2.5 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -101,6 +101,10 @@ Todo lo siguiente se ejecutó sobre el `index.html` final (los scripts se guarda
 Abre `index.html` en un navegador (no requiere servidor). Para reconstruir a partir de las fuentes de trabajo: `node build.mjs`; para las pruebas: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (los scripts están en el directorio de trabajo, fuera del paquete publicado).
 
 ## Historial / Changelog
+
+### 1.2.5 — 2026-10-22
+
+fff-kit 1.1.4: áreas táctiles y texto mínimo.
 
 ### 1.2.4 — 2026-10-22
 
