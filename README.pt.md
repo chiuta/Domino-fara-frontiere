@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.2.2 · **Última atualização:** 2026-10-22
+**Versão:** 1.2.3 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -102,6 +102,7 @@ Abra `index.html` num navegador (não requer servidor). Para reconstruir a parti
 
 ## Histórico / Changelog
 
+- 1.2.3 — 2026-10-22: melhorias para telemóvel e acessibilidade: texto de pelo menos 12 px e áreas táteis de pelo menos 24 px. foco de teclado visível em todos os controlos.
 - 1.2.2 — 2026-10-22: **correção**: a secção de fontes já está traduzida em todos os idiomas.
 - 1.2.1 — 2026-10-19: as 15 fichas do atlas (nome, origem, descrição, regras, aproximações; cerca de 21 000 carateres) estão traduzidas para fr, it, es, pt, de, hu; a nota «texto em inglês» já não aparece; a pesquisa abrange o nome e a descrição no idioma atual.
 - 1.1.0 — 2026-10-14: Cópia de segurança e etiquetagem de dados (fff-kit).

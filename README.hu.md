@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.2 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 1.2.3 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -102,6 +102,7 @@ Nyisd meg az `index.html` fájlt egy böngészőben (nem igényel kiszolgálót)
 
 ## Előzmények / Changelog
 
+- 1.2.3 — 2026-10-22: mobil és kisegítő finomítások: legalább 12 px-es szöveg és legalább 24 px-es érintési felületek. látható billentyűzetfókusz minden vezérlőn.
 - 1.2.2 — 2026-10-22: **javítás**: a források szakasz mostantól minden nyelven le van fordítva.
 - 1.2.1 — 2026-10-19: mind a 15 atlaszlap (név, eredet, leírás, szabályok, közelítések; kb. 21 000 karakter) le van fordítva fr, it, es, pt, de, hu nyelvre; a „szöveg angolul” megjegyzés már nem jelenik meg; a keresés az aktuális nyelvű nevet és leírást is átfogja.
 - 1.1.0 — 2026-10-14: Biztonsági mentés és adatcímkézés (fff-kit).

@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.2 · **Last updated:** 2026-10-22
+**Version:** 1.2.3 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -102,6 +102,7 @@ Open `index.html` in a browser (it does not need a server). To rebuild from the 
 
 ## History / Changelog
 
+- 1.2.3 — 2026-10-22: mobile and accessibility polish: text at least 12 px and touch targets at least 24 px. visible keyboard focus on every control.
 - 1.2.2 — 2026-10-22: **fix**: the sources section is now translated into every language.
 - 1.2.1 — 2026-10-19: all 15 atlas sheets (name, origin, description, rules, approximations; about 21,000 characters) are translated into fr, it, es, pt, de, hu; the "text in English" note no longer appears; the search covers the name and description in the current language.
 - 1.1.0 — 2026-10-14: Backup and data labelling (fff-kit).

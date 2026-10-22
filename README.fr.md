@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.2 · **Dernière mise à jour :** 2026-10-22
+**Version :** 1.2.3 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -102,6 +102,7 @@ Ouvrez `index.html` dans un navigateur (aucun serveur requis). Pour reconstruire
 
 ## Historique / Changelog
 
+- 1.2.3 — 2026-10-22: finitions mobile et accessibilité : texte d’au moins 12 px et cibles tactiles d’au moins 24 px. focus clavier visible sur chaque contrôle.
 - 1.2.2 — 2026-10-22: **correctif** : la section des sources est désormais traduite dans toutes les langues.
 - 1.2.1 — 2026-10-19 : les 15 fiches de l'atlas (nom, origine, description, règles, approximations ; environ 21 000 caractères) sont traduites en fr, it, es, pt, de, hu ; la note « texte en anglais » n'apparaît plus ; la recherche couvre le nom et la description dans la langue courante.
 - 1.1.0 — 2026-10-14 : Sauvegarde et étiquetage des données (fff-kit).
