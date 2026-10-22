@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.3 · **Dernière mise à jour :** 2026-10-22
+**Version :** 1.2.4 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -101,6 +101,10 @@ Tout ce qui suit a été exécuté sur le `index.html` final (les scripts sont c
 Ouvrez `index.html` dans un navigateur (aucun serveur requis). Pour reconstruire à partir des sources de travail : `node build.mjs` ; pour les tests : `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (les scripts se trouvent dans le répertoire de travail, hors du paquet publié).
 
 ## Historique / Changelog
+
+### 1.2.4 — 2026-10-22
+
+fff-kit 1.1.2 : PBKDF2 600 000 itérations, protection anti-clickjacking.
 
 - 1.2.3 — 2026-10-22: finitions mobile et accessibilité : texte d’au moins 12 px et cibles tactiles d’au moins 24 px. focus clavier visible sur chaque contrôle.
 - 1.2.2 — 2026-10-22: **correctif** : la section des sources est désormais traduite dans toutes les langues.
