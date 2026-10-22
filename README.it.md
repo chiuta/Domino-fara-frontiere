@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.6 · **Ultimo aggiornamento:** 2026-10-23
+**Versione:** 1.2.7 · **Ultimo aggiornamento:** 2026-10-23
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -72,7 +72,7 @@ Gli elementi dell'interfaccia (pulsanti, messaggi, registro, risultati) sono in 
 
 ## Privacy e rete
 
-Nessuna telemetria, nessuna richiesta di rete, nessun `fetch`, nessun `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (lo script è vincolato tramite hash; `style-src 'unsafe-inline'` è necessario per lo stile inline e per il blocco di sostegno). Le preferenze e le statistiche sono conservate in `localStorage` (chiave `dff1`), a cui si accede solo in `try/catch`; senza di esso l'applicazione funziona (testato con `localStorage` bloccato). `innerHTML` è usato solo per SVG generato da interi e da stringhe passate per `esc()`. Gli unici link esterni sono Buy Me a Coffee nel blocco di sostegno (`rel="noopener"`), copiato identico dagli altri repository.
+Nessuna telemetria, nessuna richiesta di rete, nessun `fetch`, nessun `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (lo script è vincolato tramite hash; `style-src 'unsafe-inline'` è necessario per lo stile inline e per il blocco di sostegno). Le preferenze e le statistiche sono conservate in `localStorage` (chiave `domino-fara-frontiere.prefs`), a cui si accede solo in `try/catch`; senza di esso l'applicazione funziona (testato con `localStorage` bloccato). `innerHTML` è usato solo per SVG generato da interi e da stringhe passate per `esc()`. Gli unici link esterni sono Buy Me a Coffee nel blocco di sostegno (`rel="noopener"`), copiato identico dagli altri repository.
 
 ## Limiti e avvertenze
 
@@ -101,6 +101,10 @@ Tutto quanto segue è stato eseguito sull'`index.html` finale (gli script sono c
 Apri `index.html` in un browser (non richiede un server). Per ricostruire dalle sorgenti di lavoro: `node build.mjs`; per i test: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (gli script si trovano nella directory di lavoro, fuori dal pacchetto pubblicato).
 
 ## Cronologia / Changelog
+
+### 1.2.7 — 2026-10-23
+- Le chiavi di archiviazione hanno ora il prefisso dell'app (`domino-fara-frontiere.prefs`); i dati esistenti (preferenze, tema e statistiche) vengono migrati automaticamente all'avvio e le vecchie copie `.fff.json` si possono ancora importare.
+- fff-kit 1.2.0: archiviazione senza prefisso corretta
 
 ### 1.2.5 — 2026-10-22
 

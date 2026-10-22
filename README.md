@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.6 · **Last updated:** 2026-10-23
+**Version:** 1.2.7 · **Last updated:** 2026-10-23
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -72,7 +72,7 @@ The interface elements (buttons, messages, log, results) are in Romanian, Englis
 
 ## Privacy and network
 
-No telemetry, no network requests, no `fetch`, no `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (the script is bound by hash; `style-src 'unsafe-inline'` is needed for the inline style and for the support block). Preferences and statistics are kept in `localStorage` (key `dff1`), accessed only in `try/catch`; without it the app works (tested with `localStorage` blocked). `innerHTML` is used only for SVG generated from integers and strings passed through `esc()`. The only external links are Buy Me a Coffee in the support block (`rel="noopener"`), copied identically from the other repos.
+No telemetry, no network requests, no `fetch`, no `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (the script is bound by hash; `style-src 'unsafe-inline'` is needed for the inline style and for the support block). Preferences and statistics are kept in `localStorage` (key `domino-fara-frontiere.prefs`), accessed only in `try/catch`; without it the app works (tested with `localStorage` blocked). `innerHTML` is used only for SVG generated from integers and strings passed through `esc()`. The only external links are Buy Me a Coffee in the support block (`rel="noopener"`), copied identically from the other repos.
 
 ## Limits and warnings
 
@@ -101,6 +101,10 @@ All of the following was run on the final `index.html` (the scripts are kept out
 Open `index.html` in a browser (it does not need a server). To rebuild from the working sources: `node build.mjs`; for tests: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (the scripts are in the working directory, outside the published package).
 
 ## History / Changelog
+
+### 1.2.7 — 2026-10-23
+- Storage keys now carry the app prefix (`domino-fara-frontiere.prefs`); existing data (preferences, theme and statistics) is migrated automatically at startup, and old `.fff.json` copies can still be imported.
+- fff-kit 1.2.0: unprefixed-storage fixed
 
 ### 1.2.5 — 2026-10-22
 

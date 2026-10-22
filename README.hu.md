@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.6 · **Utolsó frissítés:** 2026-10-23
+**Verzió:** 1.2.7 · **Utolsó frissítés:** 2026-10-23
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -72,7 +72,7 @@ A felület elemei (gombok, üzenetek, napló, eredmények) románul, angolul, fr
 
 ## Adatvédelem és hálózat
 
-Nincs telemetria, nincsenek hálózati kérések, nincs `fetch`, nincs `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (a szkript hash-sel van lekötve; a `style-src 'unsafe-inline'` a beágyazott stílushoz és a támogatói blokkhoz szükséges). A beállítások és a statisztikák a `localStorage`-ban vannak (`dff1` kulcs), amelyet csak `try/catch`-ben érünk el; nélküle az alkalmazás működik (blokkolt `localStorage`-zsal tesztelve). Az `innerHTML`-t csak egész számokból és az `esc()`-en átvezetett karakterláncokból generált SVG-hez használjuk. Az egyetlen külső hivatkozás a Buy Me a Coffee a támogatói blokkban (`rel="noopener"`), a többi tárolóból azonosan átmásolva.
+Nincs telemetria, nincsenek hálózati kérések, nincs `fetch`, nincs `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (a szkript hash-sel van lekötve; a `style-src 'unsafe-inline'` a beágyazott stílushoz és a támogatói blokkhoz szükséges). A beállítások és a statisztikák a `localStorage`-ban vannak (`domino-fara-frontiere.prefs` kulcs), amelyet csak `try/catch`-ben érünk el; nélküle az alkalmazás működik (blokkolt `localStorage`-zsal tesztelve). Az `innerHTML`-t csak egész számokból és az `esc()`-en átvezetett karakterláncokból generált SVG-hez használjuk. Az egyetlen külső hivatkozás a Buy Me a Coffee a támogatói blokkban (`rel="noopener"`), a többi tárolóból azonosan átmásolva.
 
 ## Korlátok és figyelmeztetések
 
@@ -101,6 +101,10 @@ Minden alábbi a végleges `index.html`-en futott (a szkriptek a csomagon kívü
 Nyisd meg az `index.html` fájlt egy böngészőben (nem igényel kiszolgálót). A munkaforrásokból való újraépítéshez: `node build.mjs`; a tesztekhez: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (a szkriptek a munkakönyvtárban találhatók, a közzétett csomagon kívül).
 
 ## Előzmények / Changelog
+
+### 1.2.7 — 2026-10-23
+- A tárolókulcsok mostantól az alkalmazás előtagját viselik (`domino-fara-frontiere.prefs`); a meglévő adatok (beállítások, téma és statisztika) indításkor automatikusan átkerülnek, a régi `.fff.json` másolatok továbbra is importálhatók.
+- fff-kit 1.2.0: előtag nélküli tárolás javítva
 
 ### 1.2.5 — 2026-10-22
 

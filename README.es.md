@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.6 · **Última actualización:** 2026-10-23
+**Versión:** 1.2.7 · **Última actualización:** 2026-10-23
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -72,7 +72,7 @@ Los elementos de la interfaz (botones, mensajes, registro, resultados) están en
 
 ## Privacidad y red
 
-Sin telemetría, sin solicitudes de red, sin `fetch`, sin `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (el script está ligado por hash; `style-src 'unsafe-inline'` es necesario para el estilo en línea y para el bloque de apoyo). Las preferencias y las estadísticas se guardan en `localStorage` (clave `dff1`), al que se accede solo en `try/catch`; sin él la aplicación funciona (probado con `localStorage` bloqueado). `innerHTML` se usa solo para SVG generado a partir de enteros y cadenas pasadas por `esc()`. Los únicos enlaces externos son Buy Me a Coffee en el bloque de apoyo (`rel="noopener"`), copiado idéntico de los otros repositorios.
+Sin telemetría, sin solicitudes de red, sin `fetch`, sin `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (el script está ligado por hash; `style-src 'unsafe-inline'` es necesario para el estilo en línea y para el bloque de apoyo). Las preferencias y las estadísticas se guardan en `localStorage` (clave `domino-fara-frontiere.prefs`), al que se accede solo en `try/catch`; sin él la aplicación funciona (probado con `localStorage` bloqueado). `innerHTML` se usa solo para SVG generado a partir de enteros y cadenas pasadas por `esc()`. Los únicos enlaces externos son Buy Me a Coffee en el bloque de apoyo (`rel="noopener"`), copiado idéntico de los otros repositorios.
 
 ## Límites y advertencias
 
@@ -101,6 +101,10 @@ Todo lo siguiente se ejecutó sobre el `index.html` final (los scripts se guarda
 Abre `index.html` en un navegador (no requiere servidor). Para reconstruir a partir de las fuentes de trabajo: `node build.mjs`; para las pruebas: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (los scripts están en el directorio de trabajo, fuera del paquete publicado).
 
 ## Historial / Changelog
+
+### 1.2.7 — 2026-10-23
+- Las claves de almacenamiento llevan ahora el prefijo de la aplicación (`domino-fara-frontiere.prefs`); los datos existentes (preferencias, tema y estadísticas) se migran automáticamente al iniciar y las copias antiguas `.fff.json` siguen pudiendo importarse.
+- fff-kit 1.2.0: almacenamiento sin prefijo corregido
 
 ### 1.2.5 — 2026-10-22
 

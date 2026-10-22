@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.6 · **Zuletzt aktualisiert:** 2026-10-23
+**Version:** 1.2.7 · **Zuletzt aktualisiert:** 2026-10-23
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -72,7 +72,7 @@ Die Oberflächenelemente (Schaltflächen, Meldungen, Protokoll, Ergebnisse) sind
 
 ## Datenschutz und Netzwerk
 
-Keine Telemetrie, keine Netzwerkanfragen, kein `fetch`, kein `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (das Skript ist per Hash gebunden; `style-src 'unsafe-inline'` ist für den Inline-Stil und für den Unterstützungsblock nötig). Einstellungen und Statistiken werden in `localStorage` (Schlüssel `dff1`) gehalten, auf den nur in `try/catch` zugegriffen wird; ohne ihn funktioniert die App (getestet mit blockiertem `localStorage`). `innerHTML` wird nur für SVG verwendet, das aus ganzen Zahlen und über `esc()` geleiteten Zeichenketten erzeugt wird. Die einzigen externen Links sind Buy Me a Coffee im Unterstützungsblock (`rel="noopener"`), identisch aus den anderen Repos kopiert.
+Keine Telemetrie, keine Netzwerkanfragen, kein `fetch`, kein `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (das Skript ist per Hash gebunden; `style-src 'unsafe-inline'` ist für den Inline-Stil und für den Unterstützungsblock nötig). Einstellungen und Statistiken werden in `localStorage` (Schlüssel `domino-fara-frontiere.prefs`) gehalten, auf den nur in `try/catch` zugegriffen wird; ohne ihn funktioniert die App (getestet mit blockiertem `localStorage`). `innerHTML` wird nur für SVG verwendet, das aus ganzen Zahlen und über `esc()` geleiteten Zeichenketten erzeugt wird. Die einzigen externen Links sind Buy Me a Coffee im Unterstützungsblock (`rel="noopener"`), identisch aus den anderen Repos kopiert.
 
 ## Grenzen und Warnungen
 
@@ -101,6 +101,10 @@ Alles Folgende wurde auf der finalen `index.html` ausgeführt (die Skripte werde
 Öffne `index.html` in einem Browser (es wird kein Server benötigt). Zum Neuaufbau aus den Arbeitsquellen: `node build.mjs`; für Tests: `node tests/fuzz.js <index.html> 500`, `node tests/scenarios.js <index.html>`, `node tests/layout.js <index.html>`, `node tests/i18n-check.js` (die Skripte liegen im Arbeitsverzeichnis, außerhalb des veröffentlichten Pakets).
 
 ## Verlauf / Changelog
+
+### 1.2.7 — 2026-10-23
+- Die Speicherschlüssel tragen jetzt das App-Präfix (`domino-fara-frontiere.prefs`); vorhandene Daten (Einstellungen, Design und Statistik) werden beim Start automatisch migriert, alte `.fff.json`-Kopien lassen sich weiterhin importieren.
+- fff-kit 1.2.0: Speicher ohne Präfix behoben
 
 ### 1.2.5 — 2026-10-22
 
