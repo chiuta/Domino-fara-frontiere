@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.1 · **Ultima actualizare:** 2026-10-19
+**Versiune:** 1.2.2 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -102,6 +102,7 @@ Deschide `index.html` într-un browser (nu cere server). Pentru a reconstrui din
 
 ## Istoric / Changelog
 
+- 1.2.2 — 2026-10-22: **remediere**: secțiunea de surse este acum tradusă în toate limbile.
 - 1.2.1 — 2026-10-19: toate cele 15 fișe de atlas (nume, origine, descriere, reguli, aproximări; circa 21.000 de caractere) sunt traduse în fr, it, es, pt, de, hu; nota „text în engleză” nu mai apare; căutarea cuprinde numele și descrierea în limba curentă.
 - 1.1.0 — 2026-10-14: Copie de rezervă și etichetare date (fff-kit).
 

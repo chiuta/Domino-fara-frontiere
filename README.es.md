@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.1 · **Última actualización:** 2026-10-19
+**Versión:** 1.2.2 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -102,6 +102,7 @@ Abre `index.html` en un navegador (no requiere servidor). Para reconstruir a par
 
 ## Historial / Changelog
 
+- 1.2.2 — 2026-10-22: **corrección**: la sección de fuentes ya está traducida a todos los idiomas.
 - 1.2.1 — 2026-10-19: las 15 fichas del atlas (nombre, origen, descripción, reglas, aproximaciones; unos 21 000 caracteres) están traducidas a fr, it, es, pt, de, hu; la nota «texto en inglés» ya no aparece; la búsqueda abarca el nombre y la descripción en el idioma actual.
 - 1.1.0 — 2026-10-14: Copia de seguridad y etiquetado de datos (fff-kit).
 

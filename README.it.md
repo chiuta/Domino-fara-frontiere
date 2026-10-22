@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.1 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 1.2.2 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -102,6 +102,7 @@ Apri `index.html` in un browser (non richiede un server). Per ricostruire dalle 
 
 ## Cronologia / Changelog
 
+- 1.2.2 — 2026-10-22: **correzione**: la sezione delle fonti è ora tradotta in tutte le lingue.
 - 1.2.1 — 2026-10-19: tutte le 15 schede dell'atlante (nome, origine, descrizione, regole, approssimazioni; circa 21.000 caratteri) sono tradotte in fr, it, es, pt, de, hu; la nota «testo in inglese» non compare più; la ricerca include il nome e la descrizione nella lingua corrente.
 - 1.1.0 — 2026-10-14: Copia di riserva ed etichettatura dei dati (fff-kit).
 
