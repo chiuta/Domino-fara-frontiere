@@ -29,6 +29,8 @@ Doar ce este verificat în cod și în teste:
 - AI în trei niveluri care diferă real (vezi „Limite”): 1 aleatoriu/lacom, 2 euristici, 3 numără piesele jucate și deduce din pase ce nu are un adversar. AI-ul lucrează numai pe vederea publică + propria mână.
 - Sugestie (H), mod „arată mâinile AI” explicit și doar pentru învățat, sămânță opțională pentru partide reproductibile, statistici locale, temă luminoasă/întunecată (la prima deschidere se urmează preferința sistemului), 3 mărimi de text, auto-joc al mutării unice (tragere/pas).
 - „Anulează mutarea” (buton sau tasta U): revine la starea de dinaintea ultimei tale mutări (până la 40 de pași, inclusiv mutările AI făcute între timp; starea se clonează, nu se recalculează). O partidă în care ai folosit anularea nu intră în statistici.
+- **Turneu între prieteni (v2.0):** butonul „Turneu” creează un turneu de 2–16 jucători (toți cu toți sau eliminare directă, cu liber pentru număr impar), cu variantele Block, Draw și Mexican Train alternate pe runde. Scorurile partidelor jucate la masă se introduc manual (la Mexican Train câștigă scorul mai mic); clasamentul (3/1/0 puncte), progresul și campionul se calculează local, se salvează în `localStorage` și se pot exporta/importa ca text JSON.
+- **Sincronizare p2p a turneului:** organizatorul și un prieten se conectează direct (WebRTC, cod copiat sau QR, fără server, doar cu acordul explicit din dialog); tabelul ajunge la oaspete, iar rezultatele introduse de oricare dintre ei ajung la celălalt (organizatorul validează). O singură legătură odată.
 - Randomul: `crypto.getRandomValues` cu eșantionare prin respingere; cu sămânță, mulberry32 (aceeași eșantionare). Amestec Fisher–Yates.
 - Accesibilitate: joc complet de la tastatură, `aria-live` pe stare, focus vizibil, ținte tactile ≥ 44 px (măsurat pe 390 px; excepție: butoanele din subsolul de donații, ~29 px), focus de tastatură păstrat după fiecare mutare, contrast ≥ 4,5:1 (măsurat pe perechile de culori din ambele teme), `prefers-reduced-motion`, fără scroll orizontal la 390 px, `<noscript>`, `lang` dinamic.
 
@@ -72,7 +74,7 @@ Elementele de interfață (butoane, mesaje, jurnal, rezultate) sunt în română
 
 ## Confidențialitate și rețea
 
-Fără telemetrie, fără cereri de rețea, fără `fetch`, fără `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (scriptul este legat prin hash; `style-src 'unsafe-inline'` este necesar pentru stilul inline și pentru blocul de sprijin). Preferințele și statisticile se păstrează în `localStorage` (cheia `domino-fara-frontiere.prefs`), accesat doar în `try/catch`; fără el aplicația funcționează (testat cu `localStorage` blocat). `innerHTML` se folosește doar pentru SVG generat din numere întregi și șiruri trecute prin `esc()`. Singurele linkuri externe sunt Buy Me a Coffee din blocul de sprijin (`rel="noopener"`), copiat identic din celelalte repo-uri.
+Fără telemetrie, fără cereri de rețea, fără `fetch`, fără `eval`. CSP: `default-src 'none'; script-src 'sha256-…'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'` (scriptul este legat prin hash; `style-src 'unsafe-inline'` este necesar pentru stilul inline și pentru blocul de sprijin). Preferințele și statisticile se păstrează în `localStorage` (cheile `domino-fara-frontiere.prefs` și `domino-fara-frontiere.tourn` pentru turneu), accesat doar în `try/catch`; fără el aplicația funcționează (testat cu `localStorage` blocat). `innerHTML` se folosește doar pentru SVG generat din numere întregi și șiruri trecute prin `esc()`. Singura funcție de rețea este sincronizarea p2p a turneului (WebRTC, doar la cererea explicită, cu acord în dialog; fără server de semnalizare, fără STUN implicit; celălalt jucător vede adresa ta IP). Singurele linkuri externe sunt Buy Me a Coffee din blocul de sprijin (`rel="noopener"`), copiat identic din celelalte repo-uri.
 
 ## Limite și avertismente
 
@@ -80,7 +82,7 @@ Fără telemetrie, fără cereri de rețea, fără `fetch`, fără `eval`. CSP: 
 - Regulile unor jocuri diferă de la regiune la regiune; alegerile făcute sunt în coloana ⚠ și în fișele din aplicație.
 - Nu este un instrument de pariuri și nu are valoare oficială pentru federații.
 - Interfața a fost verificată vizual în Chromium (1280×800 și 390×844); nu a fost testată pe Safari, Firefox sau cu cititoare de ecran reale.
-- Nu a fost implementat modul multi-jucător în rețea (și nu va fi: aplicația nu are rețea).
+- Partidele de domino se joacă tot contra AI-ului local; turneul doar ține evidența partidelor jucate la masă (nu joacă partida în rețea). Sincronizarea p2p a turneului nu merge peste NAT simetric fără STUN/TURN (limita este descrisă în dialogul kitului).
 
 ## Teste
 
