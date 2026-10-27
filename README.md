@@ -2,11 +2,15 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.8 · **Last updated:** 2026-10-26
+**Version:** 2.0.1 · **Last updated:** 2026-10-27
+
+**Status:** stable; review 2026-10-27 applied (see CHANGELOG.md); unified local multiplayer is **planned**, not yet implemented · **Offline:** complete (no network requests)
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 A domino atlas and a game against a local AI: 10 playable variants (2–4 players, 2-versus-2 teams where the rule requires it) and 5 documented-only entries. A single HTML file, offline, no dependencies.
+
+Playable (10): Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador, Latin 2v2 (target 100), Latin 200, Mexican Train. Atlas only (5): Chicken Foot, Bergen / Double Bergen, Five Up, All Threes, regional Latin variants (Quinientos, Milo, Sudan).
 
 **Live app:** https://chiuta.github.io/Domino-fara-frontiere/
 
