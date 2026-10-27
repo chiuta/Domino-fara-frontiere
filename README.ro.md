@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabilă; recenzia din 2026-10-27 aplicată (vezi CHANGELOG.md); modul multiplayer local unificat este **planificat**, neimplementat · **Offline:** complet (fără cereri de rețea)
 
@@ -31,6 +31,7 @@ Doar ce este verificat în cod și în teste:
 - Spinner cu patru brațe (All Fives, Sniff); trenuri personale, tren mexican, marcaje și dubluri deschise (Mexican Train).
 - Primul jucător: cel mai mare dublu din mâini (sau 6-6 la dominoul latin); tragere din boneyard acolo unde regula o permite; blocaj (nimeni nu mai poate juca): câștigă cine are cele mai puține puncte rămase, cu regula de scor a fiecărei variante (descrisă în fișa variantei).
 - AI în trei niveluri care diferă real (vezi „Limite”): 1 aleatoriu/lacom, 2 euristici, 3 numără piesele jucate și deduce din pase ce nu are un adversar. AI-ul lucrează numai pe vederea publică + propria mână.
+- **Niveluri AI verificate prin simulare** (`tests/niveluri-sim.test.mjs`, 60 de partide 1 contra 1 pe variantă, locuri alternate, 2026-10-27; variantele latine, cu 4 jucători, nu sunt simulate). Nivelul 3 bate nivelul 1 în toate variantele în afară de Fives and Threes: Block 58–2, Draw 57–3, Matador 48–12, All Fives 47–13, Muggins 45–15, Sniff 51–9, Mexican Train 58–2 (toate z ≥ 3,8); la Fives and Threes 34–26 (z = 1,0, nesemnificativ — în acord cu nota din atlas că aici nivelurile sunt aproape egale). Nivelul 2 bate nivelul 1 semnificativ la Block, Draw, Matador și Mexican Train, dar **nu** la All Fives (36–24), Muggins (34–26), Sniff (33–27) și Fives and Threes (28–32). Nivelul 3 bate nivelul 2 semnificativ la Block, Draw, Matador, All Fives și Sniff; la Muggins (z = 2,1) și Fives and Threes (z = 1,8) diferența este sub pragul de 2,58.
 - Sugestie (H), mod „arată mâinile AI” explicit și doar pentru învățat, sămânță opțională pentru partide reproductibile, statistici locale, temă luminoasă/întunecată (la prima deschidere se urmează preferința sistemului), 3 mărimi de text, auto-joc al mutării unice (tragere/pas).
 - „Anulează mutarea” (buton sau tasta U): revine la starea de dinaintea ultimei tale mutări (până la 40 de pași, inclusiv mutările AI făcute între timp; starea se clonează, nu se recalculează). O partidă în care ai folosit anularea nu intră în statistici.
 - **Turneu între prieteni (v2.0):** butonul „Turneu” creează un turneu de 2–16 jucători (toți cu toți sau eliminare directă, cu liber pentru număr impar), cu variantele Block, Draw și Mexican Train alternate pe runde. Scorurile partidelor jucate la masă se introduc manual (la Mexican Train câștigă scorul mai mic); clasamentul (3/1/0 puncte), progresul și campionul se calculează local, se salvează în `localStorage` și se pot exporta/importa ca text JSON.

@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.1 · **Last updated:** 2026-10-27
+**Version:** 2.1.0 · **Last updated:** 2026-10-27
 
 **Status:** stable; review 2026-10-27 applied (see CHANGELOG.md); unified local multiplayer is **planned**, not yet implemented · **Offline:** complete (no network requests)
 
@@ -31,6 +31,7 @@ Only what is verified in the code and in the tests:
 - Spinner with four arms (All Fives, Sniff); personal trains, the Mexican train, markers and open doubles (Mexican Train).
 - First player: the highest double in the hands (or 6-6 in Latin domino); drawing from the boneyard where the rule allows it; blocked game (nobody can play any more): whoever has the fewest points left wins, with each variant's scoring rule (described in the variant's sheet).
 - AI at three levels that really differ (see "Limits"): 1 random/greedy, 2 heuristics, 3 counts the tiles played and deduces from passes what an opponent does not have. The AI works only on the public view + its own hand.
+- **AI levels verified by simulation** (`tests/niveluri-sim.test.mjs`, 60 one-on-one games per variant, seats alternated, 2026-10-27; the 4-player Latin variants are not simulated). Level 3 beats level 1 in every variant except Fives and Threes: Block 58–2, Draw 57–3, Matador 48–12, All Fives 47–13, Muggins 45–15, Sniff 51–9, Mexican Train 58–2 (all z ≥ 3.8); in Fives and Threes 34–26 (z = 1.0, not significant — consistent with the atlas note that the levels are nearly equal there). Level 2 beats level 1 significantly in Block, Draw, Matador and Mexican Train, but **not** in All Fives (36–24), Muggins (34–26), Sniff (33–27) and Fives and Threes (28–32). Level 3 beats level 2 significantly in Block, Draw, Matador, All Fives and Sniff; in Muggins (z = 2.1) and Fives and Threes (z = 1.8) the gap is below the 2.58 threshold.
 - Hint (H), an explicit "show the AI hands" mode only for learning, an optional seed for reproducible games, local statistics, light/dark theme (on first opening the system preference is followed), 3 text sizes, auto-play of the single move (draw/pass).
 - "Undo move" (button or the U key): goes back to the state before your last move (up to 40 steps, including the AI moves made in the meantime; the state is cloned, not recomputed). A game in which you used undo does not count in the statistics.
 - Randomness: `crypto.getRandomValues` with rejection sampling; with a seed, mulberry32 (the same sampling). Fisher–Yates shuffle.
