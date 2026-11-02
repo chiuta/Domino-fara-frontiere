@@ -16,8 +16,8 @@
     "domino-fara-frontiere.prefs",
     "domino-fara-frontiere.tourn"
   ],
-  "sizeBytes": 667247,
-  "sha256": "e3443cbeb8b7f34072ced51aa09e9ad76b53f4d31534c97b8fce235eeee2385d",
+  "sizeBytes": 698568,
+  "sha256": "0e43c2297f2b4a82eb65eca801d6c171bed062fd3aa84e1857e1b83ff8b38394",
   "csp": {
     "present": true,
     "directives": {
@@ -57,7 +57,9 @@
       "label",
       "bundle",
       "qr",
-      "p2p"
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "kit": {
@@ -69,7 +71,9 @@
       "label",
       "bundle",
       "qr",
-      "p2p"
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "selfSerializing": false
