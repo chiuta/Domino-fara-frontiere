@@ -1,5 +1,9 @@
 # Jurnal de modificări
 
+## 2.1.4 — 2026-11-08
+
+- Jurnalul de puncte arată calculul: „+10 puncte (capete 4+6 = 10)” (8 limbi); test `ends-calc`.
+
 ## 2.1.1 — 2026-11-03
 
 Turneu și clasament Elo local (motor comun de jocuri), rezultate notate de mână
