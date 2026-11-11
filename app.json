@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "domino-fara-frontiere",
   "name": "Domino fără frontiere — atlas de variante și joc contra AI",
-  "version": "2.1.5",
-  "updated": "2026-11-10",
+  "version": "2.1.6",
+  "updated": "2026-11-11",
   "description": "Atlas de domino cu 10 variante jucabile contra unui AI local — Block, Draw, All Fives, Muggins, Sniff, Fives and Threes, Matador, domino latin 2v2 (țintă 100), domino latin 200 și Mexican Train — plus 5 fișe doar în atlas (Chicken Foot, Bergen, Five Up, All Threes, variante latine regionale). Seturi double-6/9/12, 2–4 jucători, AI în 3 niveluri. Offline, fără rețea, fără cont.",
   "egress": [],
   "permissions": [
@@ -18,8 +18,8 @@
     "domino-fara-frontiere.prefs",
     "domino-fara-frontiere.tourn"
   ],
-  "sizeBytes": 858238,
-  "sha256": "577fee6a29015dd110ca16e4cce1920b43b2e25abc09f7b1a4829407a2489c2c",
+  "sizeBytes": 859465,
+  "sha256": "425bb7bccf4a2ace6fd6e6fd1a502e2ee7b8cd223803c0853e673e9824e462d9",
   "csp": {
     "present": true,
     "directives": {
