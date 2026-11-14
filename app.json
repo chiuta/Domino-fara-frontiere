@@ -12,19 +12,20 @@
     "serviceWorker",
     "localStorage",
     "Web Crypto",
+    "WebGL",
     "BroadcastChannel"
   ],
   "storageKeys": [
     "domino-fara-frontiere.prefs",
     "domino-fara-frontiere.tourn"
   ],
-  "sizeBytes": 875925,
-  "sha256": "18fa5f6c5a07d59b18ad44604c81ef0cf7e856296767b34a41fc8f95c4bfd72e",
+  "sizeBytes": 927563,
+  "sha256": "0aeb666e2af83fa8f7babb447cf64ec2029dfdefb3fdc889c5e6974936417518",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×6",
+      "script-src": "sha256×7",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data:",
       "base-uri": "'none'",
