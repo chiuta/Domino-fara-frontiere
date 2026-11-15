@@ -1,5 +1,9 @@
 # Jurnal de modificări
 
+## 2.1.9 — 2026-11-15
+
+- Nou: texturi fractale hiper-detaliate (fff-texturi 1.1.2) — fundalul și suprafețele mari (carduri, panouri, antete, butoane; filele și dialogurile ascunse la încărcare, când se deschid) primesc un material generat local (WebGL2, fără rețea și fără imagini), care se repetă fără cusătură; culorile aplicației rămân ale ei. Se oprește din dialogul „Transparență” sau cu `?notex=1`.
+
 ## 2.1.4 — 2026-11-08
 
 - Jurnalul de puncte arată calculul: „+10 puncte (capete 4+6 = 10)” (8 limbi); test `ends-calc`.
